@@ -138,7 +138,7 @@ Json::Value Tradeapi::POST(std::string req,std::string params) {
 	return jsonData;
 }
 
-Json::Value Tradeapi::DELETE(std::string req,std::string params) {
+Json::Value Tradeapi::delete_func(std::string req,std::string params) {
 
         std::string request;
         Json::Value jsonData;
@@ -258,7 +258,7 @@ Order Tradeapi::get_order_by_client_order_id(std::string client_order_id) {
 }
 
 void Tradeapi::cancel_order(std::string order_id) {
-	Json::Value resp = DELETE("/orders/" + order_id);
+	Json::Value resp = delete_func("/orders/" + order_id);
 	return;
 }
 

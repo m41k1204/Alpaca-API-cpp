@@ -61,7 +61,7 @@ class Tradeapi {
 		CURL *curl = NULL;
 		Json::Value GET(std::string,std::string params="",std::string endpoint="");
 		Json::Value POST(std::string, std::string="");
-		Json::Value DELETE(std::string, std::string="");
+		Json::Value delete_func(std::string, std::string="");
 
 		static std::size_t callback(
 			    const char* in,

@@ -1,4 +1,4 @@
-ToolSet: 1.0 (local)Ninja: 1.12.1@/snap/clion/314/bin/ninja/linux/x64/ninja
+ToolSet: 17.0 (local)@C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools
 Options: 
 
-Options:-DCMAKE_MAKE_PROGRAM=/snap/clion/314/bin/ninja/linux/x64/ninja
+Options:-DCMAKE_TOOLCHAIN_FILE=C:/Users/micha/vcpkg/scripts/buildsystems/vcpkg.cmake
