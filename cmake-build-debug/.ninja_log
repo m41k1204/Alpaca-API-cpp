@@ -1,0 +1,16 @@
+# ninja log v6
+3	19	1738851867840322922	CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o	41d67b007cc08269
+1	19	1738851867838322738	CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.o	b0f244451253511c
+2	19	1738851867839322830	CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.o	1d53069f601a6f1f
+2	19	1738851867839322830	CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.o	f5516114fa8dae37
+3	19	1738851867840322922	CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.o	3c6e06b2c8ce3915
+1	269	1738851867838322738	CMakeFiles/AlpacaAPI.dir/main.cpp.o	5002c167b245c6a0
+2	408	1738851905603965370	CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o	c323bb71a4b78575
+409	493	1738851906010985947	AlpacaAPI	6675e1224cfc2a07
+2	497	1738852499084539801	CMakeFiles/AlpacaAPI.dir/main.cpp.o	5002c167b245c6a0
+3	719	1738852499085539735	CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.o	3c6e06b2c8ce3915
+2	722	1738852499084539801	CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.o	b0f244451253511c
+3	745	1738852499085539735	CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.o	f5516114fa8dae37
+3	750	1738852499085539735	CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.o	1d53069f601a6f1f
+4	780	1738852499086539669	CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o	41d67b007cc08269
+4	1024	1738852499086539669	CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o	c323bb71a4b78575
