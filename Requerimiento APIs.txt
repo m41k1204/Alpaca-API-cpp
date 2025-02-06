@@ -1,0 +1,29 @@
+Requerimientos:
+
+1. Procedimeinto para poner una orden (Compra simple o con TP/SL, Venta). Stocks y Options.
+	Ticker 		= AAPL, SPY, NVDA, GOLD (ejemplos)
+	Type		= MARKET, LIMIT
+	Duracion	= DIA, GTC (Cood un-Till Canceled)
+	Quantity	= Número de Acciones
+	Behaviour	= BUY, SELL
+
+2. Procedimiento para revisar el status de una orden puesta y editarla. Stock y Options.
+
+3. LIVE DATA: Consultar el ASK y BID price (Quotes) on el timestamp del momento (recientemente), tanto para Stocks como Options
+
+4. LIVE DATA: Consultar el ultimo trade (Orden de terceros realizada recientemente) con el Timestamp. Stock y Options.
+
+5. Conectarse a Live o Paper Account y ver portafolio
+
+
+
+Esto para:
+
+A. Alpaca
+	Puntos del 1 al 5
+
+B. IBKR
+	Puntos del 1 al 2 y 5
+	Mas adelante, del 3 al 4.
+
+

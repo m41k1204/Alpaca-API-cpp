@@ -8,17 +8,21 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/main.cpp" "CMakeFiles/AlpacaAPI.dir/main.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/main.cpp.obj.d"
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/src/Account/Account.cpp" "CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.obj.d"
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/src/Asset/Asset.cpp" "CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.obj.d"
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/src/Clock/Clock.cpp" "CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.obj.d"
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/src/Order/Order.cpp" "CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.obj.d"
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/src/Position/Position.cpp" "CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.obj.d"
-  "C:/Users/micha/Documents/Computer_Science/Alpaca-API/src/TradeApi/Tradeapi.cpp" "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.obj" "msvc" "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.obj.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/main.cpp" "CMakeFiles/AlpacaAPI.dir/main.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/main.cpp.o.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Account/Account.cpp" "CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.o.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.cpp" "CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.o.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.cpp" "CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.o.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.cpp" "CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.o.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Position/Position.cpp" "CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o.d"
+  "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/TradeApi/Tradeapi.cpp" "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o" "gcc" "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
 set(CMAKE_Fortran_TARGET_LINKED_INFO_FILES
+  )
+
+# Targets to which this target links which contain Fortran sources.
+set(CMAKE_Fortran_TARGET_FORWARD_LINKED_INFO_FILES
   )
 
 # Fortran module output directory.
