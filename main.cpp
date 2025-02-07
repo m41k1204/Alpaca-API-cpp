@@ -6,17 +6,6 @@ int main() {
 
     std::cout << "Hello World!\n";
 
-//    const char* api_key = std::getenv("APCA_API_KEY_ID");
-//    const char* secret_key = std::getenv("APCA_API_SECRET_KEY");
-//
-//    if (api_key && secret_key) {
-//        std::cout << "API Key: " << api_key << std::endl;
-//        std::cout << "Secret Key: " << secret_key << std::endl;
-//    } else {
-//        std::cerr << "Environment variables not set!" << std::endl;
-//        return 1; // Error code
-//    }
-
     std::string EndPoint = "paper-api.alpaca.markets";
     std::string KeyID = "PKFLBRNDM7BIV5MLF36G";
     std::string SecretKey = "ftKAoYm4BaDIxbytzVgZ5tklBvplje4Q1KGFhqdA";
@@ -25,8 +14,15 @@ int main() {
     api.init(EndPoint,KeyID,SecretKey);
 
     auto account = api.get_account();
-    std::cout << account.buying_power << std::endl;
-    std::cout << account.created_at << std::endl;
+    // std::cout << account.buying_power << std::endl;
+    // std::cout << account.created_at << std::endl;
 
+    // auto order = api.submit_order("TSLA", 54, "buy", "market", "day");
+    // auto orders = api.list_orders("all", 3);
+    // for (const auto& o : orders) {
+    //     std::cout << o.qty << std::endl;
+    // }
+    // auto order = api.get_order("f85a3a86-34cc-40d7-a38b-e6e67fa9cd2b");
+    // auto changed_order = api.change_order_by_client_order_id("f85a3a86-34cc-40d7-a38b-e6e67fa9cd2b", 567);
     return 0;
 }

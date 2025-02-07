@@ -36,6 +36,7 @@ CMakeFiles/AlpacaAPI.dir/main.cpp.o: /home/m41k1/Documents/freelance/alpaca/Alpa
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
   /usr/include/c++/13/bits/deque.tcc \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -126,6 +127,7 @@ CMakeFiles/AlpacaAPI.dir/main.cpp.o: /home/m41k1/Documents/freelance/alpaca/Alpa
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
@@ -1520,6 +1522,7 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
   /usr/include/c++/13/bits/cxxabi_forced.h \
   /usr/include/c++/13/bits/cxxabi_init_exception.h \
   /usr/include/c++/13/bits/deque.tcc \
+  /usr/include/c++/13/bits/enable_special_members.h \
   /usr/include/c++/13/bits/erase_if.h \
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
@@ -1610,6 +1613,7 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
   /usr/include/c++/13/map \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
+  /usr/include/c++/13/optional \
   /usr/include/c++/13/ostream \
   /usr/include/c++/13/pstl/execution_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
@@ -1929,6 +1933,8 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 
 /usr/include/string.h:
 
+/usr/include/stdlib.h:
+
 /usr/include/c++/13/bits/stl_bvector.h:
 
 /usr/include/x86_64-linux-gnu/bits/errno.h:
@@ -1960,10 +1966,6 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 /usr/include/c++/13/bits/memory_resource.h:
 
 /usr/include/c++/13/cwctype:
-
-/usr/include/c++/13/bits/range_access.h:
-
-/usr/include/c++/13/bits/localefwd.h:
 
 /usr/include/c++/13/bits/locale_facets.tcc:
 
@@ -2021,6 +2023,24 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 
 /usr/include/c++/13/array:
 
+/usr/include/c++/13/bits/std_abs.h:
+
+/usr/include/c++/13/bits/vector.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
+
+/usr/include/c++/13/bits/locale_facets.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
+
+/usr/include/c++/13/bits/basic_string.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
+
+/usr/include/c++/13/bits/ostream_insert.h:
+
+/usr/include/stdc-predef.h:
+
 /usr/include/asm-generic/bitsperlong.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
@@ -2035,16 +2055,6 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 
 /usr/include/asm-generic/socket.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
-
-/usr/include/c++/13/bits/ostream_insert.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
-
-/usr/include/c++/13/bits/basic_string.h:
-
-/usr/include/stdc-predef.h:
-
 /usr/include/c++/13/bits/new_allocator.h:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
@@ -2057,17 +2067,15 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 
 /usr/include/c++/13/ios:
 
-/usr/include/c++/13/bits/std_abs.h:
-
-/usr/include/c++/13/bits/vector.tcc:
-
 /usr/include/asm-generic/errno-base.h:
 
 /usr/include/alloca.h:
 
 /usr/include/c++/13/bits/exception.h:
 
-/usr/include/stdlib.h:
+/usr/include/stdio.h:
+
+/usr/include/asm-generic/sockios.h:
 
 /usr/include/c++/13/bits/allocator.h:
 
@@ -2078,6 +2086,12 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 /usr/include/c++/13/bits/stl_iterator_base_funcs.h:
 
 /usr/include/c++/13/bits/utility.h:
+
+/usr/include/c++/13/bits/enable_special_members.h:
+
+/usr/include/c++/13/clocale:
+
+/usr/include/c++/13/debug/assertions.h:
 
 /usr/include/features-time64.h:
 
@@ -2096,6 +2110,12 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h:
 
 /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.h:
+
+/usr/include/x86_64-linux-gnu/bits/timex.h:
+
+/usr/include/c++/13/bits/erase_if.h:
+
+/usr/include/c++/13/bits/basic_string.tcc:
 
 /usr/include/c++/13/bits/stl_tempbuf.h:
 
@@ -2158,16 +2178,6 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 /usr/include/c++/13/bits/align.h:
 
 /usr/include/c++/13/system_error:
-
-/usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h:
-
-/usr/include/c++/13/bits/locale_facets.h:
-
-/usr/include/x86_64-linux-gnu/bits/timex.h:
-
-/usr/include/c++/13/bits/basic_string.tcc:
-
-/usr/include/c++/13/bits/erase_if.h:
 
 /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.cpp:
 
@@ -2245,10 +2255,6 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 
 /usr/include/c++/13/cerrno:
 
-/usr/include/c++/13/clocale:
-
-/usr/include/c++/13/debug/assertions.h:
-
 /usr/include/x86_64-linux-gnu/bits/floatn.h:
 
 /usr/include/c++/13/bits/stl_map.h:
@@ -2286,6 +2292,12 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.cpp:
 
 /usr/include/c++/13/string:
+
+/usr/include/c++/13/bits/range_access.h:
+
+/usr/include/c++/13/bits/localefwd.h:
+
+/usr/include/c++/13/optional:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
@@ -2340,7 +2352,3 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/free
 /usr/include/limits.h:
 
 /usr/include/stdint.h:
-
-/usr/include/asm-generic/sockios.h:
-
-/usr/include/stdio.h:

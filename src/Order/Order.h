@@ -1,17 +1,14 @@
-//
-// Created by m41k1 on 2/6/25.
-//
-
 #ifndef ORDER_H
 #define ORDER_H
 
-
+#include <string>
 #include <json/json.h>
 
 class Order {
 public:
-    Order(){};
-    Order(Json::Value);
+    Order() = default;
+    Order(const Json::Value& data);
+
     std::string id;
     std::string client_order_id;
     std::string created_at;
@@ -24,20 +21,17 @@ public:
     std::string symbol;
     std::string exchange;
     std::string asset_class;
-    double qty;
-    std::string filled_qty;
+    double qty = 0.0;
+    double filled_qty = 0.0;
     std::string type;
     std::string side;
     std::string time_in_force;
-    double limit_price;
-    double stop_price;
+    double limit_price = 0.0;
+    double stop_price = 0.0;
     std::string status;
 
-    //Keep Json
+    // Store the original JSON object for debugging or future reference.
     Json::Value json;
-
 };
 
-
-
-#endif //ORDER_H
+#endif // ORDER_H

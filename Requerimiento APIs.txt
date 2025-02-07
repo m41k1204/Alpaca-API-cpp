@@ -8,6 +8,7 @@ Requerimientos:
 	Behaviour	= BUY, SELL
 
 2. Procedimiento para revisar el status de una orden puesta y editarla. Stock y Options.
+    -- se puede ver pero no se puede editar porque todas mis acciones estan en accepted
 
 3. LIVE DATA: Consultar el ASK y BID price (Quotes) on el timestamp del momento (recientemente), tanto para Stocks como Options
 

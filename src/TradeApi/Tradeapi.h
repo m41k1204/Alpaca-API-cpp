@@ -6,6 +6,7 @@
 #include <sstream>
 #include <vector>
 #include <memory>
+#include <optional>
 #include <curl/curl.h>
 #include <json/json.h>
 
@@ -26,12 +27,17 @@ public:
     /* Orders */
     Order submit_order(const std::string&, int, const std::string&, const std::string&,
                        const std::string&, double limit_price = 0, double stop_price = 0,
-                       const std::string& client_order_id = "");
-    std::vector<Order> list_orders(const std::string& status = "open", int limit = 50);
+                       const std::string& client_order_id = "") const;
+    std::vector<Order> list_orders(const std::string& status = "open", int limit = 50) const;
     Order get_order(const std::string& order_id);
     Order get_order_by_client_order_id(const std::string& client_order_id);
     void cancel_order(const std::string& order_id);
-
+    Order change_order_by_client_order_id(
+            const std::string& client_order_id,
+            std::optional<int> qty = std::nullopt,
+            std::optional<std::string> time_in_force = std::nullopt,
+            std::optional<double> limit_price = std::nullopt,
+            std::optional<double> stop_price = std::nullopt);
     /* Positions */
     std::vector<Position> list_positions();
     Position get_position(const std::string&);
@@ -52,7 +58,7 @@ public:
 private:
     std::string base_url, KeyID, SecretKey;
 
-    Json::Value send_request(const std::string& method, const std::string& endpoint, const std::string& params = "");
+    Json::Value send_request(const std::string& method, const std::string& endpoint, const std::string& params = "") const;
     static size_t callback(const char* in, size_t size, size_t num, std::string* out);
 };
 
