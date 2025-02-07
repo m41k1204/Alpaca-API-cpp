@@ -108,6 +108,264 @@ CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual 
 CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\ctype.h"
 CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\clocale"
 CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\TradeApi\Tradeapi.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\string"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\sstream"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\list"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curl.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curlver.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\system.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\inttypes.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winsock2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\winapifamily.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\winpackagefamily.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\windows.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\sdkddkver.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\excpt.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\stdarg.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\windef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\minwindef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\specstrings.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\specstrings_strict.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\specstrings_undef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\driverspecs.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\sdv_driverspecs.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnt.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\kernelspecs.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\basetsd.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\guiddef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack4.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack4.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack4.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\apiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ktmtypes.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\apisetcconv.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\minwinbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\apiquery2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\processenv.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\fileapifromapp.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\fileapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\debugapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\utilapiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\handleapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\errhandlingapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\fibersapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\namedpipeapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\profileapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\heapapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ioapiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\synchapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\interlockedapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\processthreadsapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\sysinfoapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\memoryapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\enclaveapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\threadpoollegacyapiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\threadpoolapiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\jobapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\jobapi2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\wow64apiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\libloaderapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\securitybaseapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\namespaceapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\systemtopologyapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\processtopologyapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\securityappcontainer.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\realtimeapiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\winerror.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\timezoneapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\wingdi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack4.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack4.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winuser.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\tvout.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnls.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\datetimeapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\stringapiset.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnls.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\wincon.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\wincontypes.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\consoleapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\consoleapi2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\consoleapi3.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winver.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\verrsrc.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winreg.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\reason.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winnetwk.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\wnnc.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\cderr.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\dde.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ddeml.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\dlgs.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\lzexpand.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsystem.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mciapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmiscapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmiscapi2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\playsoundapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmeapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\timeapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\joystickapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mmsyscom.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\nb30.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpc.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcdce.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcdcep.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\rpcnsi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcnterr.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcasync.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\shellapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winperf.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winsock.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\wincrypt.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\bcrypt.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ncrypt.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\dpapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winefs.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winscard.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\wtypes.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcndr.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\rpcnsip.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcsal.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\wtypesbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\guiddef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winioctl.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack1.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\winsmcrd.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winspool.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\prsht.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ole2.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\objbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\combaseapi.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\unknwnbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\objidlbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\guiddef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\cguid.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\coml2api.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\objidl.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\unknwn.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\propidlbase.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\oaidl.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\urlmon.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\oleidl.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\servprov.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\msxml.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\propidl.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\oleauto.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\pshpack8.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\poppack.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\commdlg.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\prsht.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\stralign.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winsvc.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\mcx.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\imm.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ime_cmodes.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ws2def.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\inaddr.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\qos.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ws2tcpip.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ws2ipdef.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\in6addr.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\easy.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\multi.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curl.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\urlapi.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curl.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\options.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\header.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\websockets.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\mprintf.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curl.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\json.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\config.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\allocator.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\version.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\json_features.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\forwards.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\reader.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\value.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\array"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\map"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\xtree"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\xnode_handle.h"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\vector"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\__msvc_bit_utils.hpp"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\deque"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\stack"
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\writer.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Account\Account.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Order\Order.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Position\Position.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Asset\Asset.h
+CMakeFiles\AlpacaAPI.dir\main.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Clock\Clock.h
 
 
 CMakeFiles\AlpacaAPI.dir\src\Account\Account.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Account\Account.cpp
@@ -236,6 +494,7 @@ CMakeFiles\AlpacaAPI.dir\src\Account\Account.cpp.obj: "C:\Program Files (x86)\Mi
 CMakeFiles\AlpacaAPI.dir\src\Account\Account.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\deque"
 CMakeFiles\AlpacaAPI.dir\src\Account\Account.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\stack"
 CMakeFiles\AlpacaAPI.dir\src\Account\Account.cpp.obj: C:\Users\micha\vcpkg\installed\x64-windows\include\json\writer.h
+CMakeFiles\AlpacaAPI.dir\src\Account\Account.cpp.obj: "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\iostream"
 
 
 CMakeFiles\AlpacaAPI.dir\src\Asset\Asset.cpp.obj: C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Asset\Asset.cpp
@@ -1138,9 +1397,9 @@ C:\Users\micha\Documents\Computer_Science\Alpaca-API\main.cpp:
 
 "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\use_ansi.h":
 
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\dlgs.h":
-
 C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Order\Order.h:
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\dlgs.h":
 
 "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\yvals_core.h":
 
@@ -1412,59 +1671,11 @@ C:\Users\micha\vcpkg\installed\x64-windows\include\json\json.h:
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\ucrt\locale.h":
 
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Account\Account.h:
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ws2tcpip.h":
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\config.h:
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\sstream":
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\TradeApi\Tradeapi.h:
 
 "C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\string":
 
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\allocator.h:
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\propidl.h":
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\version.h:
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\json_features.h:
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\forwards.h:
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\reader.h:
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\value.h:
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\array":
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\map":
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\xtree":
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\vector":
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winefs.h":
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\__msvc_bit_utils.hpp":
-
-"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\deque":
-
-C:\Users\micha\vcpkg\installed\x64-windows\include\json\writer.h:
-
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Asset\Asset.cpp:
-
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Asset\Asset.h:
-
-"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\prsht.h":
-
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Clock\Clock.cpp:
-
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Order\Order.cpp:
-
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Position\Position.cpp:
-
-C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\TradeApi\Tradeapi.h:
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\sstream":
 
 C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curl.h:
 
@@ -1644,6 +1855,10 @@ C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curlver.h:
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\dpapi.h":
 
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\__msvc_bit_utils.hpp":
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winefs.h":
+
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winscard.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\rpcndr.h":
@@ -1659,6 +1874,10 @@ C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curlver.h:
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\winsmcrd.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winspool.h":
+
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Clock\Clock.cpp:
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\prsht.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\winsvc.h":
 
@@ -1684,6 +1903,10 @@ C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curlver.h:
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\msxml.h":
 
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\version.h:
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\propidl.h":
+
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\oleauto.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\stralign.h":
@@ -1695,6 +1918,10 @@ C:\Users\micha\vcpkg\installed\x64-windows\include\curl\curlver.h:
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ime_cmodes.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ws2def.h":
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\config.h:
+
+"C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um\ws2tcpip.h":
 
 "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared\ws2ipdef.h":
 
@@ -1709,3 +1936,35 @@ C:\Users\micha\vcpkg\installed\x64-windows\include\curl\urlapi.h:
 C:\Users\micha\vcpkg\installed\x64-windows\include\curl\options.h:
 
 C:\Users\micha\vcpkg\installed\x64-windows\include\curl\mprintf.h:
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\allocator.h:
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\json_features.h:
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\forwards.h:
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\reader.h:
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\value.h:
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\array":
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\map":
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\xtree":
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\vector":
+
+"C:\Program Files (x86)\Microsoft Visual Studio\2022\BuildTools\VC\Tools\MSVC\14.42.34433\include\deque":
+
+C:\Users\micha\vcpkg\installed\x64-windows\include\json\writer.h:
+
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Account\Account.h:
+
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Asset\Asset.h:
+
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Asset\Asset.cpp:
+
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Order\Order.cpp:
+
+C:\Users\micha\Documents\Computer_Science\Alpaca-API\src\Position\Position.cpp:

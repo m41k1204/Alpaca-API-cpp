@@ -1,25 +1,30 @@
-//
-// Created by m41k1 on 2/6/25.
-//
-
+/* Account.cpp */
 #include "Account.h"
 
+Account::Account(const Json::Value& resp) {
+    account_blocked = resp.get("account_blocked", false).asBool();
+    pattern_day_trader = resp.get("pattern_day_trader", false).asBool();
+    trade_suspended_by_user = resp.get("trade_suspended_by_user", false).asBool();
+    trading_blocked = resp.get("trading_blocked", false).asBool();
+    transfers_blocked = resp.get("transfers_blocked", false).asBool();
 
-Account::Account(Json::Value resp) {
+    try {
+        buying_power = std::stod(resp.get("buying_power", "0").asString());
+        cash = std::stod(resp.get("cash", "0").asString());
+        cash_withdrawable = std::stod(resp.get("cash_withdrawable", "0").asString());
+        portfolio_value = std::stod(resp.get("portfolio_value", "0").asString());
+    } catch (const std::exception& e) {
+        std::cerr << "Error converting string to double: " << e.what() << std::endl;
+        buying_power = 0.0;
+        cash = 0.0;
+        cash_withdrawable = 0.0;
+        portfolio_value = 0.0;
+    }
 
-    account_blocked = resp["account_blocked"].asBool();
-    buying_power = std::stod(resp["buying_power"].asString());
-    cash = std::stod(resp["cash"].asString());
-    cash_withdrawable = std::stod(resp["cash_withdrawable"].asString());
-    created_at = resp["created_at"].asString();
-    currency = resp["currency"].asString();
-    id = resp["id"].asString();
-    pattern_day_trader = resp["pattery_day_trader"].asBool();
-    portfolio_value = std::stod(resp["portfolio_value"].asString());
-    status = resp["status"].asString();
-    trade_suspended_by_user = resp["trade_suspended_by_user"].asBool();
-    trading_blocked = resp["trading_blocked"].asBool();
-    transfers_blocked = resp["transfers_blocked"].asBool();
+    created_at = resp.get("created_at", "").asString();
+    currency = resp.get("currency", "").asString();
+    id = resp.get("id", "").asString();
+    status = resp.get("status", "").asString();
 
     json = resp;
 }

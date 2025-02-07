@@ -1,16 +1,15 @@
-//
-// Created by m41k1 on 2/6/25.
-//
-
+/* Account.h */
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
 
-
 #include <json/json.h>
+#include <string>
+#include <iostream>
 
 class Account {
 public:
-    Account(Json::Value);
+    Account(const Json::Value&);
+
     bool account_blocked;
     bool pattern_day_trader;
     bool trade_suspended_by_user;
@@ -30,6 +29,5 @@ public:
     Json::Value json;
 };
 
+#endif // ACCOUNT_H
 
-
-#endif //ACCOUNT_H
