@@ -62,4 +62,7 @@ private:
     static size_t callback(const char* in, size_t size, size_t num, std::string* out);
 };
 
+
+
+
 #endif //TRADEAPI_H
