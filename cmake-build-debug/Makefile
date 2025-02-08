@@ -273,6 +273,30 @@ src/Position/Position.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.s
 .PHONY : src/Position/Position.cpp.s
 
+src/Quote/Quote.o: src/Quote/Quote.cpp.o
+.PHONY : src/Quote/Quote.o
+
+# target to build an object file
+src/Quote/Quote.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.o
+.PHONY : src/Quote/Quote.cpp.o
+
+src/Quote/Quote.i: src/Quote/Quote.cpp.i
+.PHONY : src/Quote/Quote.i
+
+# target to preprocess a source file
+src/Quote/Quote.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.i
+.PHONY : src/Quote/Quote.cpp.i
+
+src/Quote/Quote.s: src/Quote/Quote.cpp.s
+.PHONY : src/Quote/Quote.s
+
+# target to generate assembly for a file
+src/Quote/Quote.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.s
+.PHONY : src/Quote/Quote.cpp.s
+
 src/TradeApi/Tradeapi.o: src/TradeApi/Tradeapi.cpp.o
 .PHONY : src/TradeApi/Tradeapi.o
 
@@ -324,6 +348,9 @@ help:
 	@echo "... src/Position/Position.o"
 	@echo "... src/Position/Position.i"
 	@echo "... src/Position/Position.s"
+	@echo "... src/Quote/Quote.o"
+	@echo "... src/Quote/Quote.i"
+	@echo "... src/Quote/Quote.s"
 	@echo "... src/TradeApi/Tradeapi.o"
 	@echo "... src/TradeApi/Tradeapi.i"
 	@echo "... src/TradeApi/Tradeapi.s"

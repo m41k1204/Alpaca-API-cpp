@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.o.d"
   "CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o"
   "CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o.d"
+  "CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.o"
+  "CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.o.d"
   "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o"
   "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o.d"
 )

@@ -81,12 +81,12 @@ clean: CMakeFiles/AlpacaAPI.dir/clean
 CMakeFiles/AlpacaAPI.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target AlpacaAPI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target AlpacaAPI"
 .PHONY : CMakeFiles/AlpacaAPI.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/AlpacaAPI.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/AlpacaAPI.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/AlpacaAPI.dir/rule

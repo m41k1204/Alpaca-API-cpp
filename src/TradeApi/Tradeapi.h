@@ -15,20 +15,27 @@
 #include "Position/Position.h"
 #include "Asset/Asset.h"
 #include "Clock/Clock.h"
+#include "Quote/Quote.h"
 
 class Tradeapi {
 public:
-    void init(const std::string&, const std::string&, const std::string&);
+    void init(const std::string&, const std::string&);
     ~Tradeapi() = default;
 
     /* Account */
     Account get_account();
 
     /* Orders */
-    Order submit_order(const std::string&, int, const std::string&, const std::string&,
+    Order submit_order(const bool stock, const std::string&, int, const std::string&, const std::string&,
                        const std::string&, double limit_price = 0, double stop_price = 0,
                        const std::string& client_order_id = "") const;
-    std::vector<Order> list_orders(const std::string& status = "open", int limit = 50) const;
+    std::vector<Order> list_orders(const std::string& status = "open",
+                                    int limit = 50,
+                                    const std::string& after = "",
+                                    const std::string& until = "",
+                                    const std::string& direction = "",
+                                    const std::string& symbols = "",
+                                    const std::string& side = "") const;
     Order get_order(const std::string& order_id);
     Order get_order_by_client_order_id(const std::string& client_order_id);
     void cancel_order(const std::string& order_id);
@@ -55,10 +62,16 @@ public:
     /* Calendar */
     Json::Value get_calendar(const std::string& start = "", const std::string& end = "");
 
-private:
-    std::string base_url, KeyID, SecretKey;
+    /* Quotes */
+    std::vector<Quote> get_latest_quotes(const std::string& symbols, const bool stock, const std::string& currency = "USD"/*, const std::string& feed = "opra"*/);
 
-    Json::Value send_request(const std::string& method, const std::string& endpoint, const std::string& params = "") const;
+    /* Trades */
+
+
+private:
+    std::string KeyID, SecretKey;
+
+    Json::Value send_request(const bool, const bool stock, const std::string& method, const std::string& endpoint, const std::string& params = "") const;
     static size_t callback(const char* in, size_t size, size_t num, std::string* out);
 };
 

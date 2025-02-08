@@ -26,5 +26,4 @@ Account::Account(const Json::Value& resp) {
     id = resp.get("id", "").asString();
     status = resp.get("status", "").asString();
 
-    json = resp;
 }

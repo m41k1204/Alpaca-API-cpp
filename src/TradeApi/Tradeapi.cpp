@@ -4,8 +4,7 @@
 #include <curl/curl.h>
 #include <json/json.h>
 
-void Tradeapi::init(const std::string& EndPoint, const std::string& KeyID, const std::string& SecretKey) {
-    this->base_url = "https://" + EndPoint + "/v2";
+void Tradeapi::init(const std::string& KeyID, const std::string& SecretKey) {
     this->KeyID = KeyID;
     this->SecretKey = SecretKey;
 }
@@ -15,20 +14,25 @@ size_t Tradeapi::callback(const char* in, size_t size, size_t num, std::string* 
     return size * num;
 }
 
-Json::Value Tradeapi::send_request(const std::string& method, const std::string& endpoint, const std::string& params) const {
+Json::Value Tradeapi::send_request(const bool trading, const bool stock, const std::string& method, const std::string& endpoint, const std::string& params) const {
+    std::string base_url;
+    if (trading) {
+        base_url = "https://paper-api.alpaca.markets/v2";
+    }
+    else {
+        if (stock) base_url = "https://data.alpaca.markets/v2";
+        else base_url = "https://data.alpaca.markets/v1beta1";
+    }
+    std::string url = base_url + endpoint;
+
     CURL* curl = curl_easy_init();
     if (!curl) return Json::Value();
 
-    // Build the base URL from the base_url and endpoint.
-    std::string url = base_url + endpoint;
     if(method == "GET" && !params.empty()){
-        // For GET requests, append query parameters to the URL.
         url += params;
     }
-
     curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
 
-    // Set up headers. These include authentication and, if a POST, content-type headers.
     struct curl_slist* headers = nullptr;
     headers = curl_slist_append(headers, ("APCA-API-KEY-ID: " + KeyID).c_str());
     headers = curl_slist_append(headers, ("APCA-API-SECRET-KEY: " + SecretKey).c_str());
@@ -44,23 +48,18 @@ Json::Value Tradeapi::send_request(const std::string& method, const std::string&
     }
 
     curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
-
-    // Set up the response string and the callback function.
     std::string response_string;
     curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, callback);
     curl_easy_setopt(curl, CURLOPT_WRITEDATA, &response_string);
 
-    // Execute the request.
     CURLcode res = curl_easy_perform(curl);
 
     long http_code = 0;
     curl_easy_getinfo(curl, CURLINFO_RESPONSE_CODE, &http_code);
 
-    // Clean up resources.
     curl_easy_cleanup(curl);
     curl_slist_free_all(headers);
 
-    // Parse the response if the HTTP code indicates success.
     Json::Value jsonData;
     if (http_code == 200) {
         Json::CharReaderBuilder reader;
@@ -82,12 +81,11 @@ Json::Value Tradeapi::send_request(const std::string& method, const std::string&
     return jsonData;
 }
 
-
 Account Tradeapi::get_account() {
-    return Account(send_request("GET", "/account"));
+    return Account(send_request(true, false, "GET", "/account"));
 }
 
-Order Tradeapi::submit_order(const std::string& symbol, const int qty, const std::string& side, const std::string& type,
+Order Tradeapi::submit_order(const bool stock, const std::string& symbol, const int qty, const std::string& side, const std::string& type,
                              const std::string& time_in_force, const double limit_price, const double stop_price,
                              const std::string& client_order_id) const {
     Json::Value data;
@@ -99,12 +97,27 @@ Order Tradeapi::submit_order(const std::string& symbol, const int qty, const std
     if (type == "limit") data["limit_price"] = limit_price;
     if (type == "stop" || type == "stop_limit") data["stop_price"] = stop_price;
     const Json::StreamWriterBuilder writer;
-    return {send_request("POST", "/orders", Json::writeString(writer, data))};
+    return {send_request(true, stock, "POST", "/orders", Json::writeString(writer, data))};
 }
 
-std::vector<Order> Tradeapi::list_orders(const std::string& status, int limit) const {
-    // Call send_request once and store the response.
-    Json::Value ordersJson = send_request("GET", "/orders", "?status=" + status + "&limit=" + std::to_string(limit));
+std::vector<Order> Tradeapi::list_orders(const std::string& status,
+                                        int limit,
+                                        const std::string& after,
+                                        const std::string& until,
+                                        const std::string& direction,
+                                        const std::string& symbols,
+                                        const std::string& side) const {
+    std::string params;
+    params.append("?status="+status);
+    params.append("&limit="+std::to_string(limit));
+    if (!after.empty()) params.append("&after=" + after);
+    if (!until.empty()) params.append("&until=" + until);
+    if (!direction.empty()) params.append("&direction=" + direction);
+    if (!symbols.empty()) params.append("&symbols=" + symbols);
+    if (!side.empty()) params.append("&side=" + side);
+
+
+    Json::Value ordersJson = send_request(true, true, "GET", "/orders",params);
     std::vector<Order> orders;
 
     // Check if the returned JSON is an array.
@@ -121,50 +134,51 @@ std::vector<Order> Tradeapi::list_orders(const std::string& status, int limit) c
     return orders;
 }
 
-
 Order Tradeapi::get_order(const std::string& order_id) {
-    return Order(send_request("GET", "/orders/" + order_id));
+    return Order(send_request(true, true, "GET", "/orders/" + order_id));
 }
 
 Order Tradeapi::get_order_by_client_order_id(const std::string& client_order_id) {
-    return Order(send_request("GET", "/orders:by_client_order_id?client_order_id=" + client_order_id));
+    return Order(send_request(true, true , "GET", "/orders:by_client_order_id?client_order_id=" + client_order_id));
 }
 
 void Tradeapi::cancel_order(const std::string& order_id) {
-    send_request("DELETE", "/orders/" + order_id);
+    send_request(true, true, "DELETE", "/orders/" + order_id);
 }
 
 std::vector<Position> Tradeapi::list_positions() {
-    return std::vector<Position>(std::begin(send_request("GET", "/positions")), std::end(send_request("GET", "/positions")));
+    Json::Value positions = send_request(true, true, "GET", "/positions");
+    return std::vector<Position>(std::begin(positions), std::end(positions));
 }
 
+
 Position Tradeapi::get_position(const std::string& symbol) {
-    Json::Value resp = send_request("GET", "/positions/" + symbol);
+    Json::Value resp = send_request(true, true, "GET", "/positions/" + symbol);
     return resp.isNull() ? Position(symbol) : Position(resp);
 }
 
-std::vector<Asset> Tradeapi::list_assets(const std::string& status, const std::string& asset_class) {
-    return std::vector<Asset>(std::begin(send_request("GET", "/assets", "?status=" + status + "&asset_class=" + asset_class)),
-                              std::end(send_request("GET", "/assets", "?status=" + status + "&asset_class=" + asset_class)));
-}
+std::vector<Quote> Tradeapi::get_latest_quotes(const std::string& symbols,  const bool stock, const std::string& currency/*, const std::string& feed*/) {
+    std::string endpoint;
+    std::string params;
+    params.append("?symbols=" + symbols);
+    if (stock) {
+        params.append("&currency=" + currency);
+        endpoint = "/stocks/quotes/latest";
+    }
+    else {
+        endpoint = "/options/quotes/latest";
+    }
+    Json::Value quotes_json = send_request(false, stock, "GET", endpoint, params);
 
-Asset Tradeapi::get_asset(const std::string& symbol) {
-    return Asset(send_request("GET", "/assets/" + symbol));
-}
+    std::vector<Quote> quotes;
+    for (const std::string& symbol : quotes_json.getMemberNames()) {
 
-Json::Value Tradeapi::get_barset(const std::vector<std::string>& symbols, const std::string& timeframe, int limit) {
-    std::string symbols_str = "symbols=";
-    for (const auto& s : symbols) symbols_str += s + ",";
-    symbols_str.pop_back();
-    return send_request("GET", "/bars/" + timeframe, "?" + symbols_str + "&limit=" + std::to_string(limit));
-}
+        const Json::Value& quoteData = quotes_json[symbol];
 
-Clock Tradeapi::get_clock() {
-    return Clock(send_request("GET", "/clock"));
-}
+        quotes.emplace_back(symbol, quoteData);
+    }
 
-Json::Value Tradeapi::get_calendar(const std::string& start, const std::string& end) {
-    return send_request("GET", "/calendar", "?start=" + start + "&end=" + end);
+    return quotes;
 }
 
 Order Tradeapi::change_order_by_client_order_id(
@@ -194,5 +208,29 @@ Order Tradeapi::change_order_by_client_order_id(
     std::string payload = Json::writeString(writer, data);
 
     // Send the PATCH request and construct an Order from the response.
-    return Order(send_request("PATCH", "/orders/" + client_order_id, payload));
+    return Order(send_request( true, true, "PATCH", "/orders/" + client_order_id, payload));
 }
+
+// std::vector<Asset> Tradeapi::list_assets(const std::string& status, const std::string& asset_class) {
+//     return std::vector<Asset>(std::begin(send_request("GET", "/assets", "?status=" + status + "&asset_class=" + asset_class)),
+//                               std::end(send_request("GET", "/assets", "?status=" + status + "&asset_class=" + asset_class)));
+// }
+//
+// Asset Tradeapi::get_asset(const std::string& symbol) {
+//     return Asset(send_request("GET", "/assets/" + symbol));
+// }
+//
+// Json::Value Tradeapi::get_barset(const std::vector<std::string>& symbols, const std::string& timeframe, int limit) {
+//     std::string symbols_str = "symbols=";
+//     for (const auto& s : symbols) symbols_str += s + ",";
+//     symbols_str.pop_back();
+//     return send_request("GET", "/bars/" + timeframe, "?" + symbols_str + "&limit=" + std::to_string(limit));
+// }
+//
+// Clock Tradeapi::get_clock() {
+//     return Clock(send_request("GET", "/clock"));
+// }
+//
+// Json::Value Tradeapi::get_calendar(const std::string& start, const std::string& end) {
+//     return send_request("GET", "/calendar", "?start=" + start + "&end=" + end);
+// }

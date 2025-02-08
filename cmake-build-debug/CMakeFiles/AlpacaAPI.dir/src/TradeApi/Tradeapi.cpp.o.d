@@ -233,4 +233,6 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: \
  /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.h \
  /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Position/Position.h \
  /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.h
+ /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.h \
+ /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Quote/Quote.h \
+ /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h
