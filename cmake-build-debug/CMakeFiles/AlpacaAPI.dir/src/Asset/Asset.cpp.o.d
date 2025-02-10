@@ -1,7 +1,7 @@
 CMakeFiles/AlpacaAPI.dir/src/Asset/Asset.cpp.o: \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.cpp \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Asset/Asset.cpp \
  /usr/include/stdc-predef.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Asset/Asset.h \
  /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
  /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

@@ -16,10 +16,11 @@
 #include "Asset/Asset.h"
 #include "Clock/Clock.h"
 #include "Quote/Quote.h"
+#include "Trade/Trade.h"
 
 class Tradeapi {
 public:
-    void init(const std::string&, const std::string&);
+    void init(const std::string&,const std::string&, const std::string&);
     ~Tradeapi() = default;
 
     /* Account */
@@ -63,13 +64,15 @@ public:
     Json::Value get_calendar(const std::string& start = "", const std::string& end = "");
 
     /* Quotes */
-    std::vector<Quote> get_latest_quotes(const std::string& symbols, const bool stock, const std::string& currency = "USD"/*, const std::string& feed = "opra"*/);
+    std::vector<Quote> get_latest_quotes_stocks(const std::string& symbols, const std::string& currency = "USD") const;
+    std::vector<Quote> get_latest_quotes_options(const std::string& symbols) const;
 
     /* Trades */
-
+    std::vector<Trade> get_latest_trades_stocks(const std::string& symbols, const std::string& currency = "USD") const;
+    std::vector<Trade> get_latest_trades_options(const std::string& symbols) const;
 
 private:
-    std::string KeyID, SecretKey;
+    std::string BaseUrl, KeyID, SecretKey;
 
     Json::Value send_request(const bool, const bool stock, const std::string& method, const std::string& endpoint, const std::string& params = "") const;
     static size_t callback(const char* in, size_t size, size_t num, std::string* out);

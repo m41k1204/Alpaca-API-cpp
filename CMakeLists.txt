@@ -23,6 +23,7 @@ file(GLOB SOURCES
         src/Position/*.cpp
         src/TradeApi/*.cpp
         src/Quote/*.cpp
+        src/Trade/*.cpp
 )
 
 # Build the executable

@@ -1,7 +1,7 @@
 CMakeFiles/AlpacaAPI.dir/src/Order/Order.cpp.o: \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.cpp \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Order/Order.cpp \
  /usr/include/stdc-predef.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Order/Order.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \

@@ -39,7 +39,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "AlpacaAPI::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-AlpacaAPI-Debug-b8f09f314a06d4e3549e.json",
+					"jsonFile" : "target-AlpacaAPI-Debug-36b1c10e2e36fdc0d0e8.json",
 					"name" : "AlpacaAPI",
 					"projectIndex" : 0
 				}
@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug",
-		"source" : "/home/m41k1/Documents/freelance/alpaca/Alpaca-API"
+		"build" : "/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug",
+		"source" : "/home/m41k1/Documents/proyectos/alpaca/Alpaca-API"
 	},
 	"version" : 
 	{

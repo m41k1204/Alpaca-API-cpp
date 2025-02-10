@@ -57,10 +57,10 @@ RM = /snap/clion/314/bin/cmake/linux/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/m41k1/Documents/freelance/alpaca/Alpaca-API
+CMAKE_SOURCE_DIR = /home/m41k1/Documents/proyectos/alpaca/Alpaca-API
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug
+CMAKE_BINARY_DIR = /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/freelance/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -297,6 +297,30 @@ src/Quote/Quote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.s
 .PHONY : src/Quote/Quote.cpp.s
 
+src/Trade/Trade.o: src/Trade/Trade.cpp.o
+.PHONY : src/Trade/Trade.o
+
+# target to build an object file
+src/Trade/Trade.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.o
+.PHONY : src/Trade/Trade.cpp.o
+
+src/Trade/Trade.i: src/Trade/Trade.cpp.i
+.PHONY : src/Trade/Trade.i
+
+# target to preprocess a source file
+src/Trade/Trade.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.i
+.PHONY : src/Trade/Trade.cpp.i
+
+src/Trade/Trade.s: src/Trade/Trade.cpp.s
+.PHONY : src/Trade/Trade.s
+
+# target to generate assembly for a file
+src/Trade/Trade.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.s
+.PHONY : src/Trade/Trade.cpp.s
+
 src/TradeApi/Tradeapi.o: src/TradeApi/Tradeapi.cpp.o
 .PHONY : src/TradeApi/Tradeapi.o
 
@@ -351,6 +375,9 @@ help:
 	@echo "... src/Quote/Quote.o"
 	@echo "... src/Quote/Quote.i"
 	@echo "... src/Quote/Quote.s"
+	@echo "... src/Trade/Trade.o"
+	@echo "... src/Trade/Trade.i"
+	@echo "... src/Trade/Trade.s"
 	@echo "... src/TradeApi/Tradeapi.o"
 	@echo "... src/TradeApi/Tradeapi.i"
 	@echo "... src/TradeApi/Tradeapi.s"

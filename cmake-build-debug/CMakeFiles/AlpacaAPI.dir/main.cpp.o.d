@@ -1,5 +1,5 @@
 CMakeFiles/AlpacaAPI.dir/main.cpp.o: \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/main.cpp \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/13/iostream \
  /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
@@ -150,7 +150,7 @@ CMakeFiles/AlpacaAPI.dir/main.cpp.o: \
  /usr/include/c++/13/bits/basic_ios.tcc \
  /usr/include/c++/13/bits/ostream.tcc /usr/include/c++/13/istream \
  /usr/include/c++/13/bits/istream.tcc \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/TradeApi/Tradeapi.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/TradeApi/Tradeapi.h \
  /usr/include/c++/13/sstream /usr/include/c++/13/bits/sstream.tcc \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
@@ -227,10 +227,11 @@ CMakeFiles/AlpacaAPI.dir/main.cpp.o: \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/stack /usr/include/c++/13/bits/stl_stack.h \
  /usr/include/jsoncpp/json/writer.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Account/Account.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Position/Position.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Quote/Quote.h \
- /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Account/Account.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Order/Order.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Position/Position.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Asset/Asset.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Clock/Clock.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Quote/Quote.h \
+ /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/Trade.h

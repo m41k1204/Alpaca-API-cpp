@@ -1,7 +1,7 @@
 CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/TradeApi/Tradeapi.cpp \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/TradeApi/Tradeapi.cpp \
  /usr/include/stdc-predef.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/TradeApi/Tradeapi.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/TradeApi/Tradeapi.h \
  /usr/include/c++/13/string /usr/include/c++/13/bits/requires_hosted.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
@@ -229,10 +229,11 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: \
  /usr/include/c++/13/bits/stl_deque.h /usr/include/c++/13/bits/deque.tcc \
  /usr/include/c++/13/stack /usr/include/c++/13/bits/stl_stack.h \
  /usr/include/jsoncpp/json/writer.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Account/Account.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Order/Order.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Position/Position.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Asset/Asset.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Quote/Quote.h \
- /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Account/Account.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Order/Order.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Position/Position.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Asset/Asset.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Clock/Clock.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Quote/Quote.h \
+ /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/Trade.h

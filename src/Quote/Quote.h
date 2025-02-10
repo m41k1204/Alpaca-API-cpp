@@ -31,4 +31,5 @@ public:
 
 
 
+
 #endif //QUOTE_H

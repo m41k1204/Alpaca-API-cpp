@@ -1,7 +1,7 @@
 CMakeFiles/AlpacaAPI.dir/src/Clock/Clock.cpp.o: \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.cpp \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Clock/Clock.cpp \
  /usr/include/stdc-predef.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Clock/Clock.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Clock/Clock.h \
  /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
  /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

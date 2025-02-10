@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/m41k1/Documents/freelance/alpaca/Alpaca-API/src -I/usr/include/jsoncpp
+CXX_INCLUDES = -I/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src -I/usr/include/jsoncpp
 
 CXX_FLAGS = -g -std=gnu++17 -fdiagnostics-color=always
 

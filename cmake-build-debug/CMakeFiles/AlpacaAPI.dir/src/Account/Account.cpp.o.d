@@ -1,7 +1,7 @@
 CMakeFiles/AlpacaAPI.dir/src/Account/Account.cpp.o: \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Account/Account.cpp \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Account/Account.cpp \
  /usr/include/stdc-predef.h \
- /home/m41k1/Documents/freelance/alpaca/Alpaca-API/src/Account/Account.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Account/Account.h \
  /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
  /usr/include/c++/13/cstddef \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++config.h \

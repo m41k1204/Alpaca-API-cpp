@@ -4,7 +4,8 @@
 #include <curl/curl.h>
 #include <json/json.h>
 
-void Tradeapi::init(const std::string& KeyID, const std::string& SecretKey) {
+void Tradeapi::init(const std::string& BaseUrl, const std::string& KeyID, const std::string& SecretKey) {
+    this-> BaseUrl = BaseUrl;
     this->KeyID = KeyID;
     this->SecretKey = SecretKey;
 }
@@ -17,7 +18,7 @@ size_t Tradeapi::callback(const char* in, size_t size, size_t num, std::string* 
 Json::Value Tradeapi::send_request(const bool trading, const bool stock, const std::string& method, const std::string& endpoint, const std::string& params) const {
     std::string base_url;
     if (trading) {
-        base_url = "https://paper-api.alpaca.markets/v2";
+        base_url = "https://" + BaseUrl + "/v2";
     }
     else {
         if (stock) base_url = "https://data.alpaca.markets/v2";
@@ -157,29 +158,74 @@ Position Tradeapi::get_position(const std::string& symbol) {
     return resp.isNull() ? Position(symbol) : Position(resp);
 }
 
-std::vector<Quote> Tradeapi::get_latest_quotes(const std::string& symbols,  const bool stock, const std::string& currency/*, const std::string& feed*/) {
-    std::string endpoint;
-    std::string params;
-    params.append("?symbols=" + symbols);
-    if (stock) {
-        params.append("&currency=" + currency);
-        endpoint = "/stocks/quotes/latest";
-    }
-    else {
-        endpoint = "/options/quotes/latest";
-    }
-    Json::Value quotes_json = send_request(false, stock, "GET", endpoint, params);
+std::vector<Quote> Tradeapi::get_latest_quotes_stocks(const std::string& symbols, const std::string& currency) const {
+    const std::string params = "?symbols=" + symbols + "&currency=" + currency;
 
+    Json::Value quotes_json = send_request(false, true, "GET", "/stocks/quotes/latest", params);
     std::vector<Quote> quotes;
-    for (const std::string& symbol : quotes_json.getMemberNames()) {
 
-        const Json::Value& quoteData = quotes_json[symbol];
+    // If the quotes are nested under a "quotes" key, use that object.
+    const Json::Value quotesObject = quotes_json.isMember("quotes") ? quotes_json["quotes"] : quotes_json;
 
+    for (const std::string& symbol : quotesObject.getMemberNames()) {
+        const Json::Value& quoteData = quotesObject[symbol];
         quotes.emplace_back(symbol, quoteData);
     }
 
     return quotes;
 }
+
+std::vector<Quote> Tradeapi::get_latest_quotes_options(const std::string& symbols) const {
+    std::string params;
+    params.append("?symbols=" + symbols);
+
+    Json::Value quotes_json = send_request(false, false, "GET", "/options/quotes/latest", params);
+    std::vector<Quote> quotes;
+
+    const Json::Value quotesObject = quotes_json.isMember("quotes") ? quotes_json["quotes"] : quotes_json;
+
+    for (const std::string& symbol : quotesObject.getMemberNames()) {
+        const Json::Value& quoteData = quotesObject[symbol];
+        quotes.emplace_back(symbol, quoteData);
+    }
+
+    return quotes;
+}
+
+std::vector<Trade> Tradeapi::get_latest_trades_stocks(const std::string &symbols, const std::string &currency) const {
+    std::string params;
+    params.append("?symbols=" + symbols);
+
+    Json::Value trades_json = send_request(false, true, "GET", "/stocks/trades/latest", params);
+    std::vector<Trade> trades;
+
+    const Json::Value tradesObject = trades_json.isMember("trades") ? trades_json["trades"] : trades_json;
+
+    for (const std::string& symbol : tradesObject.getMemberNames()) {
+        const Json::Value& quoteData = tradesObject[symbol];
+        trades.emplace_back(symbol, quoteData);
+    }
+
+    return trades;
+}
+
+std::vector<Trade> Tradeapi::get_latest_trades_options(const std::string &symbols) const {
+    std::string params;
+    params.append("?symbols=" + symbols);
+
+    Json::Value trades_json = send_request(false, false, "GET", "/options/trades/latest", params);
+    std::vector<Trade> trades;
+
+    const Json::Value tradesObject = trades_json.isMember("trades") ? trades_json["trades"] : trades_json;
+
+    for (const std::string& symbol : tradesObject.getMemberNames()) {
+        const Json::Value& quoteData = tradesObject[symbol];
+        trades.emplace_back(symbol, quoteData);
+    }
+
+    return trades;
+}
+
 
 Order Tradeapi::change_order_by_client_order_id(
     const std::string& client_order_id,

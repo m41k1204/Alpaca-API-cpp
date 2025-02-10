@@ -7,15 +7,21 @@ Requerimientos:
 	Quantity	= Número de Acciones
 	Behaviour	= BUY, SELL
 
+	no funciona venta
+
 2. Procedimiento para revisar el status de una orden puesta y editarla. Stock y Options.
 
+AMD - 80$
+
 3. LIVE DATA: Consultar el ASK y BID price (Quotes) on el timestamp del momento (recientemente), tanto para Stocks como Options
+
+dos funciones distintas para stock y option
 
 4. LIVE DATA: Consultar el ultimo trade (Orden de terceros realizada recientemente) con el Timestamp. Stock y Options.
 
 5. Conectarse a Live o Paper Account y ver portafolio
 
-
+-- construir los objetos de forma normal
 
 Esto para:
 
