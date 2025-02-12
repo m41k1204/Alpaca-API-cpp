@@ -18,21 +18,21 @@ int main() {
 
 
 
-    std::vector<Trade> quotes_container;
+    std::vector<Quote> quotes_container;
 
-        std::cout << "Ingrese trade" << std::endl;
+        std::cout << "Ingrese quote" << std::endl;
         std::string symbol;
         std::string symbols;
         std::cin >> symbol;
-        while (symbol != "hola") {
+        while (symbol != "&") {
             symbols += symbol + ",";
             std::cin >> symbol;
         }
 
-        std::vector<Trade> quotes = api.get_latest_trades_stocks(symbols);
+        std::vector<Quote> quotes = api.get_latest_quotes_stocks(symbols);
         for (auto q : quotes) {quotes_container.push_back(q);}
 
-
+    writeQuotesToCSV(quotes);
 
 
 
