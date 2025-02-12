@@ -31,3 +31,4 @@ add_executable(AlpacaAPI main.cpp ${SOURCES})
 
 # Link libraries
 target_link_libraries(AlpacaAPI PRIVATE ${JSONCPP_LIBRARIES} CURL::libcurl)
+target_link_libraries(AlpacaAPI PRIVATE stdc++fs)

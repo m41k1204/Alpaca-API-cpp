@@ -234,4 +234,8 @@ CMakeFiles/AlpacaAPI.dir/main.cpp.o: \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Clock/Clock.h \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Quote/Quote.h \
  /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/Trade.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Quote/QuoteToCSV.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Quote/Quote.h \
+ /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/TradeToCSV.h \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/Trade.h

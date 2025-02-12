@@ -297,6 +297,30 @@ src/Quote/Quote.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.s
 .PHONY : src/Quote/Quote.cpp.s
 
+src/Quote/QuoteToCSV.o: src/Quote/QuoteToCSV.cpp.o
+.PHONY : src/Quote/QuoteToCSV.o
+
+# target to build an object file
+src/Quote/QuoteToCSV.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/QuoteToCSV.cpp.o
+.PHONY : src/Quote/QuoteToCSV.cpp.o
+
+src/Quote/QuoteToCSV.i: src/Quote/QuoteToCSV.cpp.i
+.PHONY : src/Quote/QuoteToCSV.i
+
+# target to preprocess a source file
+src/Quote/QuoteToCSV.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/QuoteToCSV.cpp.i
+.PHONY : src/Quote/QuoteToCSV.cpp.i
+
+src/Quote/QuoteToCSV.s: src/Quote/QuoteToCSV.cpp.s
+.PHONY : src/Quote/QuoteToCSV.s
+
+# target to generate assembly for a file
+src/Quote/QuoteToCSV.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Quote/QuoteToCSV.cpp.s
+.PHONY : src/Quote/QuoteToCSV.cpp.s
+
 src/Trade/Trade.o: src/Trade/Trade.cpp.o
 .PHONY : src/Trade/Trade.o
 
@@ -375,6 +399,9 @@ help:
 	@echo "... src/Quote/Quote.o"
 	@echo "... src/Quote/Quote.i"
 	@echo "... src/Quote/Quote.s"
+	@echo "... src/Quote/QuoteToCSV.o"
+	@echo "... src/Quote/QuoteToCSV.i"
+	@echo "... src/Quote/QuoteToCSV.s"
 	@echo "... src/Trade/Trade.o"
 	@echo "... src/Trade/Trade.i"
 	@echo "... src/Trade/Trade.s"
