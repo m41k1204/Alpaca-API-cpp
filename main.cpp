@@ -16,9 +16,12 @@ int main() {
     Tradeapi api;
     api.init(PaperEndPoint, KeyID, SecretKey);
 
-    api.change_order_by_client_order_id("", 2);
+    // api.change_order_by_client_order_id("", 2);
 
-     auto order = api.submit_order(true, "AMD", 1, "buy", "market", "day");
+    std::vector<Trade> operaciones = api.get_latest_trades_stocks("AAPL,TSLA", "USD");
+    for (const auto& trade : operaciones) {
+        std::cout << "Trade - Símbolo: " << trade.symbol << ", Precio: " << trade.trade_price << std::endl;
+    }
     // std::vector<Quote> quotes_container;
     //
     //     std::cout << "Ingrese quote" << std::endl;

@@ -27,7 +27,10 @@ public:
     Account get_account();
 
     /* Orders */
-    Order submit_order(const bool stock, const std::string&, int, const std::string&, const std::string&,
+    Order submit_order_stock(const std::string&, int, const std::string&, const std::string&,
+                       const std::string&, double limit_price = 0, double stop_price = 0,
+                       const std::string& client_order_id = "") const;
+    Order submit_order_option(const std::string&, int, const std::string&, const std::string&,
                        const std::string&, double limit_price = 0, double stop_price = 0,
                        const std::string& client_order_id = "") const;
     std::vector<Order> list_orders(const std::string& status = "open",

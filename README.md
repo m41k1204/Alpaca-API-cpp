@@ -2,38 +2,50 @@
 
 Este documento ofrece una descripción general de las funciones de TradeAPI, detallando cada uno de sus atributos (parámetros) y proporcionando ejemplos de uso en bloques de código.
 
-- **`get_account()`**
-  - **Descripción:** Recupera los detalles de la cuenta realizando una solicitud GET al endpoint `/account`.
-  - **Atributos:** No recibe parámetros adicionales.
-  - **Ejemplo:**
+- **`submit_order_stock(const std::string& symbol, const int qty, const std::string& side, const std::string& type, const std::string& time_in_force, const double limit_price, const double stop_price, const std::string& client_order_id) const`**
+  - **Descripción:** Envía una orden de acciones al API. Construye el payload en formato JSON con los detalles de la orden y realiza una solicitud POST al endpoint `/orders`. Se utiliza para enviar órdenes de compra o venta de acciones.
+  - **Atributos:**
+    - **`symbol`**: Símbolo de la acción (ticker) a operar.
+    - **`qty`**: Cantidad de acciones a comprar o vender.
+    - **`side`**: Lado de la orden ("buy" o "sell").
+    - **`type`**: Tipo de orden (por ejemplo, "market", "limit", "stop", "stop_limit").
+    - **`time_in_force`**: Duración de la orden (por ejemplo, "day", "gtc").
+    - **`limit_price`**: Precio límite, requerido si el tipo es "limit".
+    - **`stop_price`**: Precio de stop, requerido si el tipo es "stop" o "stop_limit".
+    - **`client_order_id`**: Identificador de la orden asignado por el cliente.
+  - **Ejemplo de uso:**
     ```cpp
-    Account cuenta = api.get_account();
-    std::cout << "ID de la Cuenta: " << cuenta.id << std::endl;
+    // Enviar una orden de mercado para comprar 100 acciones de AAPL.
+    Order ordenAccion = api.submit_order_stock("AAPL", 100, "buy", "market", "day", 0.0, 0.0, "orden_stock_001");
+    std::cout << "Orden de acciones enviada, estado: " << ordenAccion.status << std::endl;
+
+    // Enviar una orden limit para vender 50 acciones de MSFT con un precio límite de 300.50.
+    Order ordenLimitAccion = api.submit_order_stock("MSFT", 50, "sell", "limit", "day", 300.50, 0.0, "orden_stock_002");
+    std::cout << "Orden limit enviada, estado: " << ordenLimitAccion.status << std::endl;
     ```
 
 ---
 
-- **`submit_order(const bool stock, const std::string& symbol, const int qty, const std::string& side, const std::string& type, const std::string& time_in_force, const double limit_price, const double stop_price, const std::string& client_order_id) const`**
-  - **Descripción:** Envía una nueva orden al API.
+- **`submit_order_option(const std::string& symbol, const int qty, const std::string& side, const std::string& type, const std::string& time_in_force, const double limit_price, const double stop_price, const std::string& client_order_id) const`**
+  - **Descripción:** Envía una orden de opciones al API. Similar a la función de acciones, construye un payload JSON con los detalles de la orden y realiza una solicitud POST al endpoint `/orders`. Se utiliza para enviar órdenes de compra o venta de opciones.
   - **Atributos:**
-    - **`stock`**: `true` para órdenes de acciones, `false` para opciones.
-    - **`symbol`**: Símbolo del activo (ticker).
-    - **`qty`**: Cantidad de acciones o contratos.
+    - **`symbol`**: Símbolo de la opción a operar.
+    - **`qty`**: Cantidad de contratos a comprar o vender.
     - **`side`**: Lado de la orden ("buy" o "sell").
     - **`type`**: Tipo de orden (por ejemplo, "market", "limit", "stop", "stop_limit").
     - **`time_in_force`**: Duración de la orden (por ejemplo, "day", "gtc").
-    - **`limit_price`**: Precio límite (requerido para órdenes limit).
-    - **`stop_price`**: Precio de stop (requerido para órdenes stop o stop_limit).
-    - **`client_order_id`**: Identificador de la orden asignado por el cliente (opcional).
-  - **Ejemplo:**
+    - **`limit_price`**: Precio límite, requerido si el tipo es "limit".
+    - **`stop_price`**: Precio de stop, requerido si el tipo es "stop" o "stop_limit".
+    - **`client_order_id`**: Identificador de la orden asignado por el cliente.
+  - **Ejemplo de uso:**
     ```cpp
-    // Enviar una orden de mercado para comprar 5 acciones de AAPL.
-    Order ordenMercado = api.submit_order(true, "AAPL", 5, "buy", "market", "day", 0.0, 0.0, "orden001");
-    std::cout << "Estado de la orden: " << ordenMercado.status << std::endl;
+    // Enviar una orden de mercado para comprar 10 contratos de opción de AAPL.
+    Order ordenOpcion = api.submit_order_option("AAPL_OPT", 10, "buy", "market", "day", 0.0, 0.0, "orden_opt_001");
+    std::cout << "Orden de opciones enviada, estado: " << ordenOpcion.status << std::endl;
 
-    // Enviar una orden limit para vender 10 acciones de TSLA.
-    Order ordenLimit = api.submit_order(true, "TSLA", 10, "sell", "limit", "day", 750.50, 0.0, "orden002");
-    std::cout << "Estado de la orden: " << ordenLimit.status << std::endl;
+    // Enviar una orden limit para vender 5 contratos de opción de TSLA con un precio límite de 15.75.
+    Order ordenLimitOpcion = api.submit_order_option("TSLA_OPT", 5, "sell", "limit", "day", 15.75, 0.0, "orden_opt_002");
+    std::cout << "Orden limit de opciones enviada, estado: " << ordenLimitOpcion.status << std::endl;
     ```
 
 ---
@@ -54,18 +66,6 @@ Este documento ofrece una descripción general de las funciones de TradeAPI, det
     for (const auto& orden : ordenes) {
       std::cout << "ID Orden: " << orden.id << " - Estado: " << orden.status << std::endl;
     }
-    ```
-
----
-
-- **`get_order(const std::string& order_id)`**
-  - **Descripción:** Recupera información detallada de una orden específica usando su ID único.
-  - **Atributos:**
-    - **`order_id`**: El identificador único de la orden.
-  - **Ejemplo:**
-    ```cpp
-    Order orden = api.get_order("order_id_123");
-    std::cout << "Detalles de la orden: " << orden.toJson() << std::endl;
     ```
 
 ---

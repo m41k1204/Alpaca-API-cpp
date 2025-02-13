@@ -62,22 +62,22 @@ Json::Value Tradeapi::send_request(const bool trading, const bool stock, const s
     curl_slist_free_all(headers);
 
     Json::Value jsonData;
-    if (http_code == 200) {
-        Json::CharReaderBuilder reader;
-        std::string errs;
-        std::istringstream iss(response_string);
-        if (!Json::parseFromStream(reader, iss, &jsonData, &errs)) {
-            std::cerr << "Failed to parse JSON: " << errs << std::endl;
-        } else {
-            // Optionally, print the formatted JSON for debugging.
-            Json::StreamWriterBuilder writer;
-            writer["indentation"] = "   ";
-            std::string output = Json::writeString(writer, jsonData);
-            std::cout << "Debug JSON Output:\n" << output << std::endl;
-        }
-    } else {
-        std::cerr << "HTTP Error Code: " << http_code << std::endl;
-    }
+    // if (http_code == 200) {
+    //     Json::CharReaderBuilder reader;
+    //     std::string errs;
+    //     std::istringstream iss(response_string);
+    //     if (!Json::parseFromStream(reader, iss, &jsonData, &errs)) {
+    //         std::cerr << "Failed to parse JSON: " << errs << std::endl;
+    //     } else {
+    //         // Optionally, print the formatted JSON for debugging.
+    //         Json::StreamWriterBuilder writer;
+    //         writer["indentation"] = "   ";
+    //         std::string output = Json::writeString(writer, jsonData);
+    //         // std::cout << "Debug JSON Output:\n" << output << std::endl;
+    //     }
+    // } else {
+    //     std::cerr << "HTTP Error Code: " << http_code << std::endl;
+    // }
 
     return jsonData;
 }
@@ -86,7 +86,7 @@ Account Tradeapi::get_account() {
     return Account(send_request(true, false, "GET", "/account"));
 }
 
-Order Tradeapi::submit_order(const bool stock, const std::string& symbol, const int qty, const std::string& side, const std::string& type,
+Order Tradeapi::submit_order_stock(const std::string& symbol, const int qty, const std::string& side, const std::string& type,
                              const std::string& time_in_force, const double limit_price, const double stop_price,
                              const std::string& client_order_id) const {
     Json::Value data;
@@ -98,8 +98,24 @@ Order Tradeapi::submit_order(const bool stock, const std::string& symbol, const 
     if (type == "limit") data["limit_price"] = limit_price;
     if (type == "stop" || type == "stop_limit") data["stop_price"] = stop_price;
     const Json::StreamWriterBuilder writer;
-    return {send_request(true, stock, "POST", "/orders", Json::writeString(writer, data))};
+    return {send_request(true, true, "POST", "/orders", Json::writeString(writer, data))};
 }
+
+Order Tradeapi::submit_order_option(const std::string& symbol, const int qty, const std::string& side, const std::string& type,
+                             const std::string& time_in_force, const double limit_price, const double stop_price,
+                             const std::string& client_order_id) const {
+    Json::Value data;
+    data["symbol"] = symbol;
+    data["qty"] = qty;
+    data["side"] = side;                                                    // Behaviour
+    data["type"] = type;
+    data["time_in_force"] = time_in_force;
+    if (type == "limit") data["limit_price"] = limit_price;
+    if (type == "stop" || type == "stop_limit") data["stop_price"] = stop_price;
+    const Json::StreamWriterBuilder writer;
+    return {send_request(true, false, "POST", "/orders", Json::writeString(writer, data))};
+}
+
 
 std::vector<Order> Tradeapi::list_orders(const std::string& status,
                                         int limit,
