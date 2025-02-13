@@ -194,8 +194,4 @@ Este documento ofrece una descripción general de las funciones de TradeAPI, det
 
 ---
 
-## Primeros Pasos
 
-Asegúrate de incluir los headers necesarios y enlazar contra **libcurl** y **jsoncpp** al compilar tu aplicación. Por ejemplo:
-```bash
-g++ -std=c++17 -o miaplicacion main.cpp Tradeapi.cpp -lcurl -ljsoncpp
