@@ -19,6 +19,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/AlpacaAPI.dir/src/Quote/QuoteToCSV.cpp.o.d"
   "CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.o"
   "CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.o.d"
+  "CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o"
+  "CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o.d"
   "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o"
   "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o.d"
 )

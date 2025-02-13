@@ -48,10 +48,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/314/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/322/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/314/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/322/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "No interactive CMake dialog available..."
-	/snap/clion/314/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/snap/clion/322/bin/cmake/linux/x64/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -78,7 +78,7 @@ edit_cache/fast: edit_cache
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake to regenerate build system..."
-	/snap/clion/314/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/snap/clion/322/bin/cmake/linux/x64/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -345,6 +345,30 @@ src/Trade/Trade.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.s
 .PHONY : src/Trade/Trade.cpp.s
 
+src/Trade/TradeToCSV.o: src/Trade/TradeToCSV.cpp.o
+.PHONY : src/Trade/TradeToCSV.o
+
+# target to build an object file
+src/Trade/TradeToCSV.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o
+.PHONY : src/Trade/TradeToCSV.cpp.o
+
+src/Trade/TradeToCSV.i: src/Trade/TradeToCSV.cpp.i
+.PHONY : src/Trade/TradeToCSV.i
+
+# target to preprocess a source file
+src/Trade/TradeToCSV.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.i
+.PHONY : src/Trade/TradeToCSV.cpp.i
+
+src/Trade/TradeToCSV.s: src/Trade/TradeToCSV.cpp.s
+.PHONY : src/Trade/TradeToCSV.s
+
+# target to generate assembly for a file
+src/Trade/TradeToCSV.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AlpacaAPI.dir/build.make CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.s
+.PHONY : src/Trade/TradeToCSV.cpp.s
+
 src/TradeApi/Tradeapi.o: src/TradeApi/Tradeapi.cpp.o
 .PHONY : src/TradeApi/Tradeapi.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... src/Trade/Trade.o"
 	@echo "... src/Trade/Trade.i"
 	@echo "... src/Trade/Trade.s"
+	@echo "... src/Trade/TradeToCSV.o"
+	@echo "... src/Trade/TradeToCSV.i"
+	@echo "... src/Trade/TradeToCSV.s"
 	@echo "... src/TradeApi/Tradeapi.o"
 	@echo "... src/TradeApi/Tradeapi.i"
 	@echo "... src/TradeApi/Tradeapi.s"

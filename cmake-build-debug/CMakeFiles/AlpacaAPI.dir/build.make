@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/clion/314/bin/cmake/linux/x64/bin/cmake
+CMAKE_COMMAND = /snap/clion/322/bin/cmake/linux/x64/bin/cmake
 
 # The command to remove a file.
-RM = /snap/clion/314/bin/cmake/linux/x64/bin/cmake -E rm -f
+RM = /snap/clion/322/bin/cmake/linux/x64/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -195,10 +195,24 @@ CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/Trade.cpp -o CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.s
 
+CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o: CMakeFiles/AlpacaAPI.dir/flags.make
+CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o: /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/TradeToCSV.cpp
+CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o: CMakeFiles/AlpacaAPI.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o -MF CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o.d -o CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o -c /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/TradeToCSV.cpp
+
+CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/TradeToCSV.cpp > CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.i
+
+CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/TradeToCSV.cpp -o CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.s
+
 CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: CMakeFiles/AlpacaAPI.dir/flags.make
 CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/TradeApi/Tradeapi.cpp
 CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: CMakeFiles/AlpacaAPI.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o -MF CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o.d -o CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o -c /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/TradeApi/Tradeapi.cpp
 
 CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.i: cmake_force
@@ -220,6 +234,7 @@ AlpacaAPI_OBJECTS = \
 "CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.o" \
 "CMakeFiles/AlpacaAPI.dir/src/Quote/QuoteToCSV.cpp.o" \
 "CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.o" \
+"CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o" \
 "CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o"
 
 # External object files for target AlpacaAPI
@@ -234,11 +249,12 @@ AlpacaAPI: CMakeFiles/AlpacaAPI.dir/src/Position/Position.cpp.o
 AlpacaAPI: CMakeFiles/AlpacaAPI.dir/src/Quote/Quote.cpp.o
 AlpacaAPI: CMakeFiles/AlpacaAPI.dir/src/Quote/QuoteToCSV.cpp.o
 AlpacaAPI: CMakeFiles/AlpacaAPI.dir/src/Trade/Trade.cpp.o
+AlpacaAPI: CMakeFiles/AlpacaAPI.dir/src/Trade/TradeToCSV.cpp.o
 AlpacaAPI: CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o
 AlpacaAPI: CMakeFiles/AlpacaAPI.dir/build.make
 AlpacaAPI: /usr/lib/x86_64-linux-gnu/libcurl.so
 AlpacaAPI: CMakeFiles/AlpacaAPI.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable AlpacaAPI"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/m41k1/Documents/proyectos/alpaca/Alpaca-API/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable AlpacaAPI"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AlpacaAPI.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

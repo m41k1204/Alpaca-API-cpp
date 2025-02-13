@@ -16,24 +16,25 @@ int main() {
     Tradeapi api;
     api.init(PaperEndPoint, KeyID, SecretKey);
 
+    api.change_order_by_client_order_id("", 2);
 
-
-    std::vector<Quote> quotes_container;
-
-        std::cout << "Ingrese quote" << std::endl;
-        std::string symbol;
-        std::string symbols;
-        std::cin >> symbol;
-        while (symbol != "&") {
-            symbols += symbol + ",";
-            std::cin >> symbol;
-        }
-
-        std::vector<Quote> quotes = api.get_latest_quotes_stocks(symbols);
-        for (auto q : quotes) {quotes_container.push_back(q);}
-
-    writeQuotesToCSV(quotes);
-
+     auto order = api.submit_order(true, "AMD", 1, "buy", "market", "day");
+    // std::vector<Quote> quotes_container;
+    //
+    //     std::cout << "Ingrese quote" << std::endl;
+    //     std::string symbol;
+    //     std::string symbols;
+    //     std::cin >> symbol;
+    //     while (symbol != "&") {
+    //         symbols += symbol + ",";
+    //         std::cin >> symbol;
+    //     }
+    //
+    //     std::vector<Quote> quotes = api.get_latest_quotes_stocks(symbols);
+    //     for (auto q : quotes) {quotes_container.push_back(q);}
+    //
+    // writeQuotesToCSV(quotes);
+    //
 
 
     return 0;
