@@ -14,7 +14,7 @@ class Trade {
 
     std::string message_type;
     std::string symbol;
-    int trade_id;
+    uint trade_id;
     std::string exchange_code;
     double trade_price;
     int trade_size;

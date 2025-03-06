@@ -38,9 +38,11 @@ Json::Value Tradeapi::send_request(const bool trading, const bool stock, const s
     headers = curl_slist_append(headers, ("APCA-API-KEY-ID: " + KeyID).c_str());
     headers = curl_slist_append(headers, ("APCA-API-SECRET-KEY: " + SecretKey).c_str());
 
+    curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, method.c_str());
+
+
     if(method == "POST" || method == "PATCH"){
         // Set the custom request to POST.
-        curl_easy_setopt(curl, CURLOPT_CUSTOMREQUEST, method.c_str());
         // Use params as the POST payload.
         curl_easy_setopt(curl, CURLOPT_POSTFIELDS, params.c_str());
         // Append headers for JSON data.
@@ -62,22 +64,24 @@ Json::Value Tradeapi::send_request(const bool trading, const bool stock, const s
     curl_slist_free_all(headers);
 
     Json::Value jsonData;
-    // if (http_code == 200) {
-    //     Json::CharReaderBuilder reader;
-    //     std::string errs;
-    //     std::istringstream iss(response_string);
-    //     if (!Json::parseFromStream(reader, iss, &jsonData, &errs)) {
-    //         std::cerr << "Failed to parse JSON: " << errs << std::endl;
-    //     } else {
-    //         // Optionally, print the formatted JSON for debugging.
-    //         Json::StreamWriterBuilder writer;
-    //         writer["indentation"] = "   ";
-    //         std::string output = Json::writeString(writer, jsonData);
-    //         // std::cout << "Debug JSON Output:\n" << output << std::endl;
-    //     }
-    // } else {
-    //     std::cerr << "HTTP Error Code: " << http_code << std::endl;
-    // }
+    if (http_code == 200) {
+        Json::CharReaderBuilder reader;
+        std::string errs;
+        std::istringstream iss(response_string);
+        if (!Json::parseFromStream(reader, iss, &jsonData, &errs)) {
+            std::cerr << "Failed to parse JSON: " << errs << std::endl;
+        } else {
+            // Optionally, print the formatted JSON for debugging.
+            Json::StreamWriterBuilder writer;
+            writer["indentation"] = "   ";
+            std::string output = Json::writeString(writer, jsonData);
+            // std::cout << "Debug JSON Output:\n" << output << std::endl;
+        }
+    } else if (http_code == 204) {
+    } else {
+        std::cerr << "HTTP Error Code: " << http_code << "\n" << response_string << std::endl;
+    }
+
 
     return jsonData;
 }
@@ -86,32 +90,107 @@ Account Tradeapi::get_account() {
     return Account(send_request(true, false, "GET", "/account"));
 }
 
-Order Tradeapi::submit_order_stock(const std::string& symbol, const int qty, const std::string& side, const std::string& type,
-                             const std::string& time_in_force, const double limit_price, const double stop_price,
-                             const std::string& client_order_id) const {
+Order Tradeapi::submit_order_stock(
+    const std::string& symbol,
+    const int qty,
+    const std::string& side,
+    const std::string& type,
+    const std::string& time_in_force,
+    const double limit_price,
+    const double stop_price,
+    const std::string& client_order_id,
+    const double bracket_take_profit_price,
+    const double bracket_stop_loss_price) const {
     Json::Value data;
     data["symbol"] = symbol;
     data["qty"] = qty;
-    data["side"] = side;                                                    // Behaviour
+    data["side"] = side;
     data["type"] = type;
     data["time_in_force"] = time_in_force;
-    if (type == "limit") data["limit_price"] = limit_price;
-    if (type == "stop" || type == "stop_limit") data["stop_price"] = stop_price;
+    if (!client_order_id.empty()) {
+        data["client_order_id"] = client_order_id;
+    }
+
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2) << limit_price;
+    if (type == "limit") {
+        data["limit_price"] = oss.str();
+    }
+    if (type == "stop" || type == "stop_limit") {
+        data["stop_price"] = stop_price;
+    }
+
+    // If bracket order parameters are provided, add stop loss and take profit details.
+    if (bracket_take_profit_price > 0.0 || bracket_stop_loss_price > 0.0) {
+        data["order_class"] = "bracket";
+        if (bracket_take_profit_price > 0.0) {
+            Json::Value tp;
+            std::ostringstream oss_tp;
+            oss_tp << std::fixed << std::setprecision(2) << bracket_take_profit_price;
+            tp["limit_price"] = oss_tp.str();
+            data["take_profit"] = tp;
+        }
+        if (bracket_stop_loss_price > 0.0) {
+            Json::Value sl;
+            std::ostringstream oss_sl;
+            oss_sl << std::fixed << std::setprecision(2) << bracket_stop_loss_price;
+            sl["stop_price"] = oss_sl.str();
+            data["stop_loss"] = sl;
+        }
+    }
+
     const Json::StreamWriterBuilder writer;
     return {send_request(true, true, "POST", "/orders", Json::writeString(writer, data))};
 }
-
-Order Tradeapi::submit_order_option(const std::string& symbol, const int qty, const std::string& side, const std::string& type,
-                             const std::string& time_in_force, const double limit_price, const double stop_price,
-                             const std::string& client_order_id) const {
+Order Tradeapi::submit_order_option(
+    const std::string& symbol,
+    const int qty,
+    const std::string& side,
+    const std::string& type,
+    const std::string& time_in_force,
+    const double limit_price,
+    const double stop_price,
+    const std::string& client_order_id,
+    const double bracket_take_profit_price,
+    const double bracket_stop_loss_price) const {
     Json::Value data;
     data["symbol"] = symbol;
     data["qty"] = qty;
-    data["side"] = side;                                                    // Behaviour
+    data["side"] = side;
     data["type"] = type;
     data["time_in_force"] = time_in_force;
-    if (type == "limit") data["limit_price"] = limit_price;
-    if (type == "stop" || type == "stop_limit") data["stop_price"] = stop_price;
+    if (!client_order_id.empty()) {
+        data["client_order_id"] = client_order_id;
+    }
+
+    std::ostringstream oss;
+    oss << std::fixed << std::setprecision(2) << limit_price;
+    if (type == "limit") {
+        data["limit_price"] = oss.str();
+    }
+    if (type == "stop" || type == "stop_limit") {
+        data["stop_price"] = stop_price;
+    }
+
+    // Add bracket order parameters if provided.
+    if (bracket_take_profit_price > 0.0 || bracket_stop_loss_price > 0.0) {
+        data["order_class"] = "bracket";
+        if (bracket_take_profit_price > 0.0) {
+            Json::Value tp;
+            std::ostringstream oss_tp;
+            oss_tp << std::fixed << std::setprecision(2) << bracket_take_profit_price;
+            tp["limit_price"] = oss_tp.str();
+            data["take_profit"] = tp;
+        }
+        if (bracket_stop_loss_price > 0.0) {
+            Json::Value sl;
+            std::ostringstream oss_sl;
+            oss_sl << std::fixed << std::setprecision(2) << bracket_stop_loss_price;
+            sl["stop_price"] = oss_sl.str();
+            data["stop_loss"] = sl;
+        }
+    }
+
     const Json::StreamWriterBuilder writer;
     return {send_request(true, false, "POST", "/orders", Json::writeString(writer, data))};
 }
@@ -155,12 +234,11 @@ Order Tradeapi::get_order(const std::string& order_id) {
     return Order(send_request(true, true, "GET", "/orders/" + order_id));
 }
 
-Order Tradeapi::get_order_by_client_order_id(const std::string& client_order_id) {
-    return Order(send_request(true, true , "GET", "/orders:by_client_order_id?client_order_id=" + client_order_id));
-}
+Order Tradeapi::cancel_order(const std::string& order_id) {
+    auto order = send_request(true, true, "DELETE", "/orders/" + order_id);
+    order = send_request(true, true, "GET", "/orders/" + order_id);
+    return order;
 
-void Tradeapi::cancel_order(const std::string& order_id) {
-    send_request(true, true, "DELETE", "/orders/" + order_id);
 }
 
 std::vector<Position> Tradeapi::list_positions() {
@@ -168,14 +246,13 @@ std::vector<Position> Tradeapi::list_positions() {
     return std::vector<Position>(std::begin(positions), std::end(positions));
 }
 
-
 Position Tradeapi::get_position(const std::string& symbol) {
     Json::Value resp = send_request(true, true, "GET", "/positions/" + symbol);
     return resp.isNull() ? Position(symbol) : Position(resp);
 }
 
-std::vector<Quote> Tradeapi::get_latest_quotes_stocks(const std::string& symbols, const std::string& currency) const {
-    const std::string params = "?symbols=" + symbols + "&currency=" + currency;
+std::vector<Quote> Tradeapi::get_latest_quotes_stocks(const std::string& symbols) const {
+    const std::string params = "?symbols=" + symbols;
 
     Json::Value quotes_json = send_request(false, true, "GET", "/stocks/quotes/latest", params);
     std::vector<Quote> quotes;
@@ -208,7 +285,7 @@ std::vector<Quote> Tradeapi::get_latest_quotes_options(const std::string& symbol
     return quotes;
 }
 
-std::vector<Trade> Tradeapi::get_latest_trades_stocks(const std::string &symbols, const std::string &currency) const {
+std::vector<Trade> Tradeapi::get_latest_trades_stocks(const std::string &symbols) const {
     std::string params;
     params.append("?symbols=" + symbols);
 
@@ -242,8 +319,82 @@ std::vector<Trade> Tradeapi::get_latest_trades_options(const std::string &symbol
     return trades;
 }
 
+std::vector<Trade> Tradeapi::get_historical_data_stocks(const std::string &symbols, const int offset, const int limit) const {
+    // Obtener el tiempo actual y redondear al minuto actual
+    auto now = std::chrono::system_clock::now();
+    std::time_t now_t = std::chrono::system_clock::to_time_t(now);
+    std::tm now_tm = *std::localtime(&now_t);
+    now_tm.tm_sec = 0;  // reiniciar los segundos al inicio del minuto
+    std::time_t current_minute = std::mktime(&now_tm);
 
-Order Tradeapi::change_order_by_client_order_id(
+    // Calcular el tiempo de inicio: offset segundos antes del minuto actual
+    std::time_t start_time = current_minute - offset;
+
+    // Formatear los tiempos como cadenas en formato ISO 8601 (ej. "YYYY-MM-DDTHH:MM:SSZ")
+    std::stringstream ss_start, ss_end;
+    ss_start << std::put_time(std::localtime(&start_time), "%Y-%m-%dT%H:%M:%SZ");
+    ss_end << std::put_time(std::localtime(&current_minute), "%Y-%m-%dT%H:%M:%SZ");
+    std::string start = ss_start.str();
+    std::string end = ss_end.str();
+
+    // Construir los parámetros de la solicitud
+    std::string params;
+    params.append("?symbols=" + symbols);
+    params.append("&start=" + start);
+    params.append("&end=" + end);
+    params.append("&limit=" + std::to_string(limit));
+
+    // Enviar la solicitud y procesar la respuesta JSON
+    Json::Value trades_json = send_request(false, true, "GET", "/stocks/trades", params);
+    std::vector<Trade> trades;
+
+    // Verificar si la respuesta contiene la clave "trades"
+    if (trades_json.isMember("trades")) {
+        const Json::Value tradesBySymbol = trades_json["trades"];
+        // Iterar sobre cada clave (símbolo) en el objeto "trades"
+        for (const std::string& symbol : tradesBySymbol.getMemberNames()) {
+            const Json::Value& tradesArray = tradesBySymbol[symbol];
+            // Si el valor es un arreglo, iterar sobre cada trade
+            if (tradesArray.isArray()) {
+                for (const auto& tradeData : tradesArray) {
+                    trades.emplace_back(symbol, tradeData);
+                }
+            } else {
+                // Si no es un arreglo, tratarlo como un objeto único
+                trades.emplace_back(symbol, tradesArray);
+            }
+        }
+    } else {
+        std::cerr << "La respuesta JSON no contiene la clave 'trades': "
+                  << trades_json.toStyledString() << std::endl;
+    }
+
+    return trades;
+}
+std::vector<Trade> Tradeapi::get_historical_data_options(const std::string &symbols, const std::string &start,
+    const std::string &end, const int limit) const {
+
+    std::string params;
+    params.append("&symbols=" + symbols);
+    params.append("?start=" + start);
+    params.append("?end=" + end);
+    params.append("?limit=" + std::to_string(limit));
+
+    Json::Value trades_json = send_request(false, false, "GET", "/options/trades", params);
+    std::vector<Trade> trades;
+
+    const Json::Value tradesObject = trades_json.isMember("trades") ? trades_json["trades"] : trades_json;
+
+    for (const std::string& symbol : tradesObject.getMemberNames()) {
+        const Json::Value& quoteData = tradesObject[symbol];
+        trades.emplace_back(symbol, quoteData);
+    }
+
+    return trades;
+}
+
+
+Order Tradeapi::change_order_by_order_id(
     const std::string& client_order_id,
     std::optional<int> qty,
     std::optional<std::string> time_in_force,
@@ -272,6 +423,8 @@ Order Tradeapi::change_order_by_client_order_id(
     // Send the PATCH request and construct an Order from the response.
     return Order(send_request( true, true, "PATCH", "/orders/" + client_order_id, payload));
 }
+
+
 
 // std::vector<Asset> Tradeapi::list_assets(const std::string& status, const std::string& asset_class) {
 //     return std::vector<Asset>(std::begin(send_request("GET", "/assets", "?status=" + status + "&asset_class=" + asset_class)),

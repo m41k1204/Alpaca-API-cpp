@@ -39,5 +39,6 @@ Order::Order(const Json::Value& data)
       status(data.get("status", "").asString()),
       json(data)
 {
+
     // Additional validation or error handling could be added here.
 }

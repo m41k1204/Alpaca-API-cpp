@@ -1,4 +1,11 @@
-Requerimientos
-1. Procedimiento para poner una orden (Compra simple o ocn TP/SL, Venta)
-2. Procedimiento para revisar el status de una orden puesta y editarla
-3. Consult
+1. No funciona la modificación de ordenes, siempre sale un error 402 o 422.
+2. No funciona la cancelación de una orden
+3. No funciona la compra ni venta de una opciones cuando se usa LMT
+4. En get_latest_quotes para stocks incluyes “USD" pero en Options no. Es mejor dejarlo sin “USD”
+5. El campo de precio en objeto Quote esta en "prize" en lugar de "price"
+6. Incluir una funcion que traiga los últimos trades en el rango de tiempo especificado con resolución de hasta segundos
+7. Cuando le doy un precio para BUY con LMT y con decimales, sale error 422
+8. Cuando le pido last trade a NCLH sale un error de "libc++abi: terminating due to uncaught exception of type Json::LogicError: LargestInt out of Int range"
+9. Como hago para pedir todas las ordenes abiertas sin importar el Ticker, estado, etc?
+10. Tener un comando de validacion que permita ver si una orden esta cancelada
+11. Activar comando para poner ordenes con Take Profit y Stop Loss

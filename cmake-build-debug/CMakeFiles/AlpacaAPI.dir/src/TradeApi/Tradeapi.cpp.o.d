@@ -212,10 +212,42 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: \
  /usr/include/x86_64-linux-gnu/curl/options.h \
  /usr/include/x86_64-linux-gnu/curl/header.h \
  /usr/include/x86_64-linux-gnu/curl/websockets.h \
- /usr/include/x86_64-linux-gnu/curl/mprintf.h \
+ /usr/include/x86_64-linux-gnu/curl/mprintf.h /usr/include/c++/13/cmath \
+ /usr/include/math.h /usr/include/x86_64-linux-gnu/bits/math-vector.h \
+ /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
+ /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
+ /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
+ /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
+ /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
+ /usr/include/c++/13/bits/specfun.h /usr/include/c++/13/limits \
+ /usr/include/c++/13/tr1/gamma.tcc \
+ /usr/include/c++/13/tr1/special_function_util.h \
+ /usr/include/c++/13/tr1/bessel_function.tcc \
+ /usr/include/c++/13/tr1/beta_function.tcc \
+ /usr/include/c++/13/tr1/ell_integral.tcc \
+ /usr/include/c++/13/tr1/exp_integral.tcc \
+ /usr/include/c++/13/tr1/hypergeometric.tcc \
+ /usr/include/c++/13/tr1/legendre_function.tcc \
+ /usr/include/c++/13/tr1/modified_bessel_func.tcc \
+ /usr/include/c++/13/tr1/poly_hermite.tcc \
+ /usr/include/c++/13/tr1/poly_laguerre.tcc \
+ /usr/include/c++/13/tr1/riemann_zeta.tcc /usr/include/c++/13/iomanip \
+ /usr/include/c++/13/locale \
+ /usr/include/c++/13/bits/locale_facets_nonio.h /usr/include/c++/13/ctime \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
+ /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/13/bits/codecvt.h \
+ /usr/include/c++/13/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/13/bits/locale_conv.h \
+ /usr/include/c++/13/bits/quoted_string.h /usr/include/c++/13/chrono \
+ /usr/include/c++/13/bits/chrono.h /usr/include/c++/13/ratio \
+ /usr/include/c++/13/cstdint /usr/include/c++/13/bits/parse_numbers.h \
  /usr/include/jsoncpp/json/json.h /usr/include/jsoncpp/json/config.h \
- /usr/include/c++/13/cstdint /usr/include/jsoncpp/json/allocator.h \
- /usr/include/c++/13/cstring /usr/include/string.h /usr/include/strings.h \
+ /usr/include/jsoncpp/json/allocator.h /usr/include/c++/13/cstring \
+ /usr/include/string.h /usr/include/strings.h \
  /usr/include/jsoncpp/json/version.h \
  /usr/include/jsoncpp/json/json_features.h \
  /usr/include/jsoncpp/json/forwards.h /usr/include/jsoncpp/json/reader.h \
@@ -235,5 +267,5 @@ CMakeFiles/AlpacaAPI.dir/src/TradeApi/Tradeapi.cpp.o: \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Asset/Asset.h \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Clock/Clock.h \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Quote/Quote.h \
- /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h \
+ /usr/include/c++/13/variant \
  /home/m41k1/Documents/proyectos/alpaca/Alpaca-API/src/Trade/Trade.h

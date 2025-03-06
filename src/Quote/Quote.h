@@ -18,10 +18,10 @@ public:
     std::string message_type;
     std::string symbol;
     std::string ask_exchange_code;
-    double ask_prize;
+    double ask_price;
     int ask_size;
     std::string bid_exchange_code;
-    double bid_prize;
+    double bid_price;
     int bid_size;
     std::vector<std::string> quote_condition;
     std::string timestamp;

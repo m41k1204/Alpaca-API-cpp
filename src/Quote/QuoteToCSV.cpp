@@ -55,10 +55,10 @@ void writeQuotesToCSV(const std::vector<Quote>& quotes) {
         outFile << escape_csv(quote.message_type) << "";
         outFile << escape_csv(quote.symbol) << ",";
         outFile << escape_csv(quote.ask_exchange_code) << ",";
-        outFile << quote.ask_prize << ",";
+        outFile << quote.ask_price << ",";
         outFile << quote.ask_size << ",";
         outFile << escape_csv(quote.bid_exchange_code) << ",";
-        outFile << quote.bid_prize << ",";
+        outFile << quote.bid_price << ",";
         outFile << quote.bid_size << ",";
 
         std::ostringstream conditionStream;
