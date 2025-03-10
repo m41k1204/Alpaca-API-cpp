@@ -28,11 +28,8 @@ int main() {
 
     std::string PaperEndPoint = "paper-api.alpaca.markets";
     std::string RealEndPoint = "api.alpaca.markets";
-    // std::string KeyID = "PKFLBRNDM7BIV5MLF36G";
-    // std::string SecretKey = "ftKAoYm4BaDIxbytzVgZ5tklBvplje4Q1KGFhqdA";
-    // //
-    string KeyID = "PKBQZEY74TVFX6NP6G1A";                    // Constante con KEY ID
-    string SecretKey = "nDuJd4yQuXIHz8onZYt8uUoEXvpHcTNSscufgxFp";
+    // std::string KeyID = "";
+    // std::string SecretKey = "";
 
     Tradeapi api;                                   // Se define api como un Tradeapi
     api.init(PaperEndPoint, KeyID, SecretKey);      // Cambiar PaperEndPoint o RealEndPoint dependiendo del caso
