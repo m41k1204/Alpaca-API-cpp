@@ -1,227 +1,150 @@
-Este documento ofrece una descripción general de las funciones de TradeAPI, detallando cada uno de sus atributos (parámetros) y proporcionando ejemplos de uso en bloques de código.
+# Alpaca API C++ Client Library
+
+This C++ library is designed to interact with the [Alpaca Markets API](https://alpaca.markets/), enabling developers to programmatically trade stocks, access market data, and manage portfolios with a focus on simplicity and performance.
+
+## 📚 Features
+- **REST API Integration**: Interact with Alpaca's RESTful API for account management, placing orders, and querying market data.
+- **WebSocket Support**: Subscribe to real-time updates for trades, quotes, and account information.
+- **Order Management**: Create, retrieve, update, and cancel stock orders efficiently.
+- **Data Retrieval**: Access historical and real-time market data.
+- **Portfolio Management**: View account details, positions, and portfolio summaries.
 
 ---
 
-**`submit_order_stock(const std::string& symbol, const int qty, const std::string& side, const std::string& type, const std::string& time_in_force, const double limit_price, const double stop_price, const std::string& client_order_id) const`**
+## ⚙️ Prerequisites
 
-- **Descripción:** Envía una orden de acciones al API. Construye el payload en formato JSON con los detalles de la orden y realiza una solicitud POST al endpoint `/orders`. Se utiliza para enviar órdenes de compra o venta de acciones.
-- **Atributos:**
-  - **`symbol`**: Símbolo de la acción (ticker) a operar.
-  - **`qty`**: Cantidad de acciones a comprar o vender.
-  - **`side`**: Lado de la orden ("buy" o "sell").
-  - **`type`**: Tipo de orden (por ejemplo, "market", "limit", "stop", "stop_limit").
-  - **`time_in_force`**: Duración de la orden (por ejemplo, "day", "gtc").
-  - **`limit_price`**: Precio límite, requerido si el tipo es "limit".
-  - **`stop_price`**: Precio de stop, requerido si el tipo es "stop" o "stop_limit".
-  - **`client_order_id`**: Identificador de la orden asignado por el cliente.
-  - **`bracket_take_profit_price`**: Precio para vender la accion una vez que supera el umbral dispuesto para ganar dinero.
-  - **`bracket_stop_loss_price`**: Precio para minimizar riesgo una vez que el precio de la accion baja.
-- **Ejemplo de uso:**
-  ```cpp
-  // Enviar una orden de mercado para comprar 100 acciones de AAPL.
-  Order ordenAccion = api.submit_order_stock("AAPL", 100, "buy", "market", "day", 0.0, 0.0, "orden_stock_001");
-  std::cout << "Orden de acciones enviada, estado: " << ordenAccion.status << std::endl;
+- C++17 or higher
+- CMake (version 3.10+)
+- [cURL](https://curl.se/) for HTTP requests
+- [nlohmann/json](https://github.com/nlohmann/json) for JSON processing
+- [WebSocket++](https://github.com/zaphoyd/websocketpp) for WebSocket communication
 
-  // Enviar una orden limit para vender 50 acciones de MSFT con un precio límite de 300.50.
-  Order ordenLimitAccion = api.submit_order_stock("MSFT", 50, "sell", "limit", "day", 300.50, 0.0, "orden_stock_002");
-  std::cout << "Orden limit enviada, estado: " << ordenLimitAccion.status << std::endl;
-  ```
-
+> Ensure you have an Alpaca account and API keys ready to use.
 
 ---
 
-- **`submit_order_option(const std::string& symbol, const int qty, const std::string& side, const std::string& type, const std::string& time_in_force, const double limit_price, const double stop_price, const std::string& client_order_id) const`**
-  - **Descripción:** Envía una orden de opciones al API. Similar a la función de acciones, construye un payload JSON con los detalles de la orden y realiza una solicitud POST al endpoint `/orders`. Se utiliza para enviar órdenes de compra o venta de opciones.
-  - **Atributos:**
-    - **`symbol`**: Símbolo de la opción a operar.
-    - **`qty`**: Cantidad de contratos a comprar o vender.
-    - **`side`**: Lado de la orden ("buy" o "sell").
-    - **`type`**: Tipo de orden (por ejemplo, "market", "limit", "stop", "stop_limit").
-    - **`time_in_force`**: Duración de la orden (por ejemplo, "day", "gtc").
-    - **`limit_price`**: Precio límite, requerido si el tipo es "limit".
-    - **`stop_price`**: Precio de stop, requerido si el tipo es "stop" o "stop_limit".
-    - **`client_order_id`**: Identificador de la orden asignado por el cliente.
-    - **`bracket_take_profit_price`**: Precio para vender la accion una vez que supera el umbral dispuesto para ganar dinero.
-    - **`bracket_stop_loss_price`**: Precio para minimizar riesgo una vez que el precio de la accion baja.
-  - **Ejemplo de uso:**
-    ```cpp
-    // Enviar una orden de mercado para comprar 10 contratos de opción de AAPL.
-    Order ordenOpcion = api.submit_order_option("AAPL_OPT", 10, "buy", "market", "day", 0.0, 0.0, "orden_opt_001");
-    std::cout << "Orden de opciones enviada, estado: " << ordenOpcion.status << std::endl;
+## 🛠️ Installation
 
-    // Enviar una orden limit para vender 5 contratos de opción de TSLA con un precio límite de 15.75.
-    Order ordenLimitOpcion = api.submit_order_option("TSLA_OPT", 5, "sell", "limit", "day", 15.75, 0.0, "orden_opt_002");
-    std::cout << "Orden limit de opciones enviada, estado: " << ordenLimitOpcion.status << std::endl;
-    
-    // Enviar una orden bracket para comprar 10 contratos de opción de AAPL con un precio límite de 19.00,
-    // estableciendo un take profit a 20.50 y un stop loss a 18.00.
-    Order ordenBracketOpcion = api.submit_order_option("AAPL_OPT", 10, "buy", "limit", "day", 19.00, 0.0, "orden_opt_003", 20.50, 18.00);
-    std::cout << "Orden de opciones con bracket enviada, estado: " << ordenBracketOpcion.status << std::endl;
-    ```
+### 1. Clone the Repository
+```bash
+git clone https://github.com/m41k1204/Alpaca-API-cpp.git
+cd Alpaca-API-cpp
+```
+
+### 2. Configure the Build System
+```bash
+mkdir build
+cd build
+cmake ..
+```
+
+### 3. Build the Project
+```bash
+make
+```
+
+### 4. Run the Application
+```bash
+./AlpacaApiApp
+```
 
 ---
 
-- **`list_orders(const std::string& status, int limit, const std::string& after, const std::string& until, const std::string& direction, const std::string& symbols, const std::string& side) const`**
-  - **Descripción:** Recupera una lista de órdenes aplicando filtros opcionales.
-  - **Atributos:**
-    - **`status`**: Filtra por estado de la orden (por ejemplo, "open", "closed", "all").
-    - **`limit`**: Número máximo de órdenes a retornar.
-    - **`after`**: Recupera órdenes creadas después de esta marca de tiempo.
-    - **`until`**: Recupera órdenes creadas hasta esta marca de tiempo.
-    - **`direction`**: Dirección de ordenamiento ("asc" o "desc").
-    - **`symbols`**: Símbolos (separados por comas) para filtrar las órdenes.
-    - **`side`**: Filtra las órdenes por lado ("buy" o "sell").
-  - **Ejemplo:**
-    ```cpp
-    std::vector<Order> ordenes = api.list_orders("open", 5, "", "", "desc", "AAPL,TSLA", "");
-    for (const auto& orden : ordenes) {
-      std::cout << "ID Orden: " << orden.id << " - Estado: " << orden.status << std::endl;
-    }
-    ```
+## 🔑 Configuration
+
+Create a `.env` file or directly configure your API keys in the `main.cpp` file:
+```cpp
+#define APCA_API_KEY "your_api_key"
+#define APCA_API_SECRET_KEY "your_secret_key"
+#define APCA_API_BASE_URL "https://paper-api.alpaca.markets"
+```
+
+> **Note:** For production, switch the `APCA_API_BASE_URL` to the live trading endpoint.
 
 ---
 
-- **`cancel_order(const std::string& order_id)`**
-  - **Descripción:** Cancela una orden existente identificada por su ID.
-  - **Atributos:**
-    - **`order_id`**: El identificador único de la orden a cancelar.
-  - **Ejemplo:**
-    ```cpp
-    api.cancel_order("order_id_123");
-    std::cout << "Orden cancelada exitosamente." << std::endl;
-    ```
+## 🚀 Usage Examples
+
+### Place a New Order
+```cpp
+Order order;
+order.symbol = "AAPL";
+order.qty = 10;
+order.side = "buy";
+order.type = "market";
+order.time_in_force = "gtc";
+api.place_order(order);
+```
+
+### Get Account Information
+```cpp
+Account account = api.get_account();
+std::cout << "Account Balance: " << account.cash << std::endl;
+```
+
+### Subscribe to WebSocket
+```cpp
+api.subscribe_to_trades("AAPL", [](const Trade& trade) {
+    std::cout << "Trade Price: " << trade.price << std::endl;
+});
+```
 
 ---
 
-- **`list_positions()`**
-  - **Descripción:** Recupera una lista de las posiciones actuales en la cuenta.
-  - **Atributos:** No recibe parámetros adicionales.
-  - **Ejemplo:**
-    ```cpp
-    std::vector<Position> posiciones = api.list_positions();
-    for (const auto& pos : posiciones) {
-      std::cout << "Símbolo: " << pos.symbol << " - Cantidad: " << pos.qty << std::endl;
-    }
-    ```
+## 🧩 Project Structure
+
+```
+├── src
+│   ├── AlpacaApi.cpp     # Core API logic
+│   ├── AlpacaApi.h       # API interface definitions
+│   └── main.cpp          # Example usage and entry point
+├── include
+│   └── AlpacaApi.h       # Public headers
+├── CMakeLists.txt        # Build configuration
+└── README.md             # Project documentation
+```
 
 ---
 
-- **`get_position(const std::string& symbol)`**
-  - **Descripción:** Recupera detalles de la posición para un activo específico, identificado por su símbolo.
-  - **Atributos:**
-    - **`symbol`**: El símbolo (ticker) del activo.
-  - **Ejemplo:**
-    ```cpp
-    Position posicion = api.get_position("AAPL");
-    std::cout << "Posición para AAPL: " << posicion.qty << " acciones." << std::endl;
-    ```
+## ✅ Testing
+
+To run tests, use the provided testing framework (e.g., Google Test) if available:
+```bash
+make test
+```
+
+Ensure that API keys used for testing have limited permissions.
 
 ---
 
-- **`get_latest_quotes_stocks(const std::string& symbols, const std::string& currency) const`**
-  - **Descripción:** Obtiene las últimas cotizaciones de acciones.
-  - **Atributos:**
-    - **`symbols`**: Lista de símbolos de acciones, separados por comas.
-    - **`currency`**: La moneda (por ejemplo, "USD") en la que se cotizan las acciones.
-  - **Ejemplo:**
-    ```cpp
-    std::vector<Quote> cotizaciones = api.get_latest_quotes_stocks("AAPL,TSLA", "USD");
-    for (const auto& cotizacion : cotizaciones) {
-      std::cout << "Símbolo: " << cotizacion.symbol << " - Precio: " << cotizacion.ask_prize <<" " << cotizacion.bid_prize << std::endl;
-    }
-    ```
+## 📄 Contributing
+
+Contributions are welcome! To contribute:
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature-name`).
+3. Commit your changes (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature-name`).
+5. Create a pull request.
 
 ---
 
-- **`get_latest_quotes_options(const std::string& symbols) const`**
-  - **Descripción:** Obtiene las últimas cotizaciones de opciones.
-  - **Atributos:**
-    - **`symbols`**: Lista de símbolos de opciones, separados por comas.
-  - **Ejemplo:**
-    ```cpp
-    std::vector<Quote> cotizacionesOpciones = api.get_latest_quotes_options("AAPL_OPT,TSLA_OPT");
-    for (const auto& cotizacion : cotizacionesOpciones) {
-      std::cout << "Símbolo de opción: " << cotizacion.symbol << " - Precio: " << cotizacion.ask_prize <<" " << cotizacion.bid_prize << std::endl;
-    }
-    ```
+## ⚖️ License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-- **`get_latest_trades_stocks(const std::string &symbols, const std::string &currency) const`**
-  - **Descripción:** Recupera los datos de las últimas operaciones (trades) para acciones.
-  - **Atributos:**
-    - **`symbols`**: Lista de símbolos de acciones, separados por comas.
-    - **`currency`**: La moneda de negociación (por ejemplo, "USD").
-  - **Ejemplo:**
-    ```cpp
-    std::vector<Trade> operaciones = api.get_latest_trades_stocks("AAPL,TSLA", "USD");
-    for (const auto& trade : operaciones) {
-      std::cout << "Trade - Símbolo: " << trade.symbol << ", Precio: " << trade.trade_price << std::endl;
-    }
-    ```
+## 📞 Support
+
+For issues and feature requests, please open an [issue](https://github.com/m41k1204/Alpaca-API-cpp/issues).
+
+> **Note:** This project is a community contribution and is not officially maintained by Alpaca Markets.
 
 ---
 
-- **`get_latest_trades_options(const std::string &symbols) const`**
-  - **Descripción:** Recupera los datos de las últimas operaciones (trades) para opciones.
-  - **Atributos:**
-    - **`symbols`**: Lista de símbolos de opciones, separados por comas.
-  - **Ejemplo:**
-    ```cpp
-    std::vector<Trade> tradesOpciones = api.get_latest_trades_options("AAPL_OPT,TSLA_OPT");
-    for (const auto& trade : tradesOpciones) {
-      std::cout << "Trade - Símbolo de opción: " << trade.symbol << ", Precio: " << trade.trade_price << std::endl;
-    }
-    ```
+## 📚 References
+- [Alpaca API Documentation](https://alpaca.markets/docs/api-references/)
+- [cURL Documentation](https://curl.se/docs/)
+- [nlohmann/json](https://github.com/nlohmann/json)
+- [WebSocket++](https://github.com/zaphoyd/websocketpp)
 
----
-
-- **`change_order_by_order_id(const std::string& client_order_id, std::optional<int> qty, std::optional<std::string> time_in_force, std::optional<double> limit_price, std::optional<double> stop_price)`**
-  - **Descripción:** Modifica una orden existente identificada por un ID asignado por el cliente.
-  - **Atributos:**
-    - **`client_order_id`**: El identificador de la orden asignado por el cliente.
-    - **`qty`**: *(Opcional)* Nueva cantidad para la orden.
-    - **`time_in_force`**: *(Opcional)* Nuevo valor para el tiempo en vigor (por ejemplo, "day", "gtc").
-    - **`limit_price`**: *(Opcional)* Nuevo precio límite.
-    - **`stop_price`**: *(Opcional)* Nuevo precio de stop.
-  - **Ejemplo:**
-    ```cpp
-    // Modificar una orden existente actualizando la cantidad y el precio límite.
-    Order ordenModificada = api.change_order_by_client_order_id("client_order_abc", 20, std::nullopt, 150.75, std::nullopt);
-    std::cout << "Orden modificada: " << ordenModificada.json() << std::endl;
-    ```
-
----
-
-- **`get_order(const std::string& order_id)`**
-  - **Descripción:** Recupera los detalles de una orden específica identificada por su `order_id`.
-  - **Atributos:**
-    - **`order_id`**: El identificador único de la orden que se desea recuperar.
-  - **Ejemplo de uso:**
-    ```cpp
-    // Recuperar los detalles de una orden utilizando su ID.
-    Order ordenRecuperada = api.get_order("order_id_123");
-    std::cout << "Detalles de la orden: " << ordenRecuperada.json() << std::endl;
-    ```
-
----
-
-- **`get_historical_data_stocks(const std::string &symbols, const std::string &start,
-    const std::string &end, const int limit)`**
-  - **Descripción:** Recupera los detalles ordenes entre un intervalo de tiempo.
-  - **Atributos:**
-    - **`symbols`**: Símbolo(s) de la acción (ticker) en formato de cadena. Si se desean múltiples símbolos, deben estar separados por comas.
-    - **`start`**: Fecha y hora de inicio en formato ISO8601 (por ejemplo, `"2024-01-03T00:00:00Z"`).
-    - **`end`**: Fecha y hora final en formato ISO8601 (por ejemplo, `"2024-01-04T00:00:00Z"`).
-    - **`limit`**: Número máximo de registros a retornar en la consulta.
-
-  - **Ejemplo de uso:**
-    ```cpp
-    // Recuperar datos históricos de operaciones para AAPL entre el 3 y el 4 de enero de 2024, limitando a 10 registros.
-    auto trades = api.get_historical_data_stocks("AAPL", "2024-01-03T00:00:00Z", "2024-01-04T00:00:00Z", 10);
-    for (int i = 0; i < trades.size(); ++i) {
-        std::cout << "Trade Price: " << trades[i].trade_price << std::endl;
-    }
-    ```
-    
----
